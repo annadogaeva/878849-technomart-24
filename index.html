@@ -5,8 +5,102 @@
     <title>HTML Academy: Техномарт</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
+  	<header class="page-header">
+  		<div class="header-top"> <!--Верх хедера-->
+  			<a class="header-logo"><img src="#" width="220" height="50" alt="Техномарт"></a>
+  			<span class="search-form">Поиск:</span>
+  			<a href="#" class="bookmarks">Закладки: 0</a>
+  			<a href="#" class="shopping-cart">Корзина: 0</a>
+  			<a href="#" class="btn order-btn">Оформить заказ</a>
+  		</div>	
+  		<div class="header-middle"> <!--Середина хедера-->
+	  			<h1 class="page-title">
+	  				Интернет-магазин строительных материалов и инструментов для ремонта
+	  			</h1>
+  			<p class="header-contacts">
+  					<span>+7 (812) 555-05-55</span><br>
+  					<span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+  			</p>
+  			<div class="user-nav"> <!--Вход/Регистрация-->
+	  			<ul>
+	  				<li><a href="login.html">Войти</a></li>
+	  				<li><a href="register.html">Регистрация</a></li>
+	  			</ul>
+  			</div>
+  		</div>
+  		<nav class="site-nav"> <!--Меню навигации-->
+  			<ul>
+  				<li><a href="index.html">Главная</a></li>
+  				<li><a href="aboutcompany.html">Компания</a></li>
+  				<li><a href="catalog.html">Каталог</a></li>
+  				<li><a href="news.html">Новости</a></li>
+  				<li><a href="promo.html">Спецпредложения</a></li>
+  				<li><a href="delivery.html">Доставка</a></li>
+  				<li><a href="contacts.html">Контакты</a></li>
+  			</ul>
+  		</nav>
+  	</header>
+  	<main>
+  		<!--
+			Предложения
+			Популярные товары
+			Популярные производители
+			Сервисы
+  		-->
+  			<section class="about-company">
+  				<h2>Компания «Техномарт»</h2>
+  				<p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+  				<p>Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями: </p>
+  				<ul>
+  					<li>Деловые линии</li>
+  					<li>Автотрейдинг</li>
+  					<li>Желдорэкспедиция</li>
+  				</ul>
+  				<a class="btn" href="aboutcompany.html">Подробнее о компании</a>
+  			</section>
+  			<section class="contact-info">
+  				<h2>Контакты</h2>
+  				<p>Вы можете забрать товар сами, заехав в наш офис:</p>
+  				<img src="#" alt="Карта" width="300" height="160">
+  				<a class="btn contact-us-btn" href="#">Заблудились? Напишите нам!</a>
+  			</section>
+  	</main>
+  	<footer class="page-footer">
+  		<div class="footer-top"> <!--Верх футера-->
+  			<a class="footer-logo"><img src="#" width="220" height="50" alt="Техномарт"></a>
+  			<p class="footer-contacts">
+  				г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+  				+7 (812) 555-05-55
+  			</p>
+  			<ul class="footer-nav"> <!--Навигация в футере-->
+  				<li><a href="aboutcompany.html">Компания</a></li>
+  				<li><a href="news.html">Новости</a></li>
+  				<li><a href="catalog.html">Каталог</a></li>
+  				<li><a href="delivery.html">Доставка</a></li>
+  				<li><a href="contacts.html">Контакты</a></li>
+  				<li><a href="materials.html">Материалы</a></li>
+  				<li><a href="technics.html">Техника</a></li>
+  				<li><a href="tools.html">Инструмент</a></li>
+  				<li><a href="promo.html">Спецпредложения</a></li>
+  			</ul>
+  		</div>
+  		<div class="footer-bottom"> <!--Низ футера-->
+  			<p class="footer-copyright"> 
+  				© 2010–2019 Компания «Техномарт»<br>
+				Все права защищены
+  			</p>
+  			<div class="footer-social"> <!--Соц сети-->
+  				<ul>
+  					<li class="social-btn"><a href="vk.com">ВКонтакте</a></li>
+  					<li class="social-btn"><a href="facebook.com">Facebook</a></li>
+  					<li class="social-btn"><a href="instagram.com">Instagram</a></li>
+  				</ul>
+  			</div>
+  			<div class="footer-feedback">
+  				<p>Обратная связь: <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+  				<p>Разработано - <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
+  			</div>
+  		</div>
+  	</footer>
   </body>
 </html>
