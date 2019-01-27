@@ -41,13 +41,130 @@
   		</nav>
   	</header>
   	<main>
-  		<!--
-			Предложения
-			Популярные товары
-			Популярные производители
-			Сервисы
-  		-->
-  			<section class="about-company">
+  		<section class="promo">
+  			<h2 class="visually-hidden">Предложения</h2>
+  			<ul class="promo-cards">
+  				<li class="promo-item item-new">
+  					<h3>Материалы</h3>
+  					<a href="#" class="btn promo-btn">На любой вкус</a>
+  				</li>
+  				<li class="promo-item">
+  					<h3>Инструмент</h3>
+  					<a href="#" class="btn promo-btn">На все случаи</a>
+  				</li>
+  				<li class="promo-item">
+  					<h3>Техника</h3>
+  					<a href="#" class="btn promo-btn">Для стройки</a>
+  				</li>
+  				<li class="promo-slider">
+  					<h3 class="slider-heading">Дрели</h3>
+  					<p>Соседям на радость!</p>
+  					<a href="#" class="btn">Открыть каталог</a>
+  				</li>
+  				<!-- второй слайд
+  				<li class="promo-slider">
+  					<h3 class="slider-heading">Перфораторы</h3>
+  					<p>Настоящие мужские игрушки</p>
+  					<a href="inner.html" class="btn">Открыть каталог</a>
+  				</li>
+  				`-->
+  				<li class="promo-item">
+  					<h3>Скидки 50%</h3>
+  					<a href="#" class="btn promo-btn">На 350 товаров</a>
+  				</li>
+  				<li class="promo-item">
+  					<h3>Доставка</h3>
+  					<a href="#" class="btn promo-btn">Бесплатно</a>
+  				</li>
+  			</ul>
+  		</section>
+  		<section class="popular">
+  			<div class="popular-heading">
+  				<h2>Популярные товары:</h2>
+  				<a class="btn" href="#">Все популярные товары</a>
+  			</div>
+  			<ul class="popular-items">
+  				<li class="catalog-item">
+		            <a href="#"><img src="#" width="220" height="180" alt="Перфоратор BOSCH BFG 9000"></a>
+		            <a href="#"><h3>Перфоратор BOSCH BFG 9000</h3></a>
+		            <span class="old-price">32500 Р.</span>
+		            <span class="new-price">25500 Р.</span>
+          		</li>
+          		<li class="catalog-item">
+		            <a href="#"><img src="#" width="220" height="180" alt="Перфоратор BOSCH BFG 3000"></a>
+		            <a href="#"><h3>Перфоратор BOSCH BFG 9000</h3></a>
+		            <span class="old-price">25500 Р.</span>
+		            <span class="new-price">15500 Р.</span>
+          		</li>
+          		<li class="catalog-item">
+		            <a href="#"><img src="#" width="220" height="180" alt="Перфоратор BOSCH BFG 6000"></a>
+		            <a href="#"><h3>Перфоратор BOSCH BFG 6000</h3></a>
+		            <span class="old-price">30500 Р.</span>
+		            <span class="new-price">25500 Р.</span>
+          		</li>
+          		<li class="catalog-item item-new">
+		            <a href="#"><img src="#" width="220" height="180" alt="Перфоратор BOSCH BFG 2000"></a>
+		            <a href="#"><h3>Перфоратор BOSCH BFG 2000</h3></a>
+		            <span class="old-price"></span>
+		            <span class="new-price">12500 Р.</span>
+          		</li>
+  			</ul>
+  			<div class="popular-heading">
+  				<h2>Популярные производители:</h2>
+  				<a class="btn" href="#">Все производители</a>
+  			</div>
+  			<ul class="popular-producers">
+  				<li class="producer-item">
+  					<a href="#"><img src="#" alt="BOSCH"></a>
+  				</li>
+  				<li class="producer-item">
+  					<a href="#"><img src="#" alt="Makita"></a>
+  				</li>
+  				<li class="producer-item">
+  					<a href="#"><img src="#" alt="DeWALT"></a>
+  				</li>
+  				<li class="producer-item">
+  					<a href="#"><img src="#" alt="Интерскол"></a>
+  				</li>
+  				<li class="producer-item">
+  					<a href="#"><img src="#" alt="HITACHI"></a>
+  				</li>
+  				<li class="producer-item">
+  					<a href="#"><img src="#" alt="LG"></a>
+  				</li>
+  				<li class="producer-item">
+  					<a href="#"><img src="#" alt="AEG Power solutions"></a>
+  				</li>
+  				<li class="producer-item">
+  					<a href="#"><img src="#" alt="Metabo"></a>
+  				</li>
+  			</ul>
+  		</section>
+  		<section class="services">
+  			<h2>Сервисы</h2>
+  			<p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+  			<ul class="slider-services">
+  				<li>Доставка</li>
+  				<li>Гарантия</li>
+  				<li>Кредит</li>
+  			</ul>
+  			<div class="service-description service-description-delivery">
+  				<h3>Доставка</h3>
+  				<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+  			</div>
+  			<!-- ДРУГИЕ СОСТОЯНИЯ СЛАЙДЕРА
+  			<div class="service-description service-description-warranty">
+  				<h3>Гарантия</h3>
+  				<p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+  			</div>
+  			<div class="service-description service-description-credit">
+  				<h3>Кредит</h3>
+  				<p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+  				<a class="btn" href="#">Отправить заявку</a>
+  			</div>
+  			`-->
+  		</section>
+  		<section class="about-company">
   				<h2>Компания «Техномарт»</h2>
   				<p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
   				<p>Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями: </p>
@@ -57,13 +174,13 @@
   					<li>Желдорэкспедиция</li>
   				</ul>
   				<a class="btn" href="#">Подробнее о компании</a>
-  			</section>
-  			<section class="contact-info">
+  		</section>
+  		<section class="contact-info">
   				<h2>Контакты</h2>
   				<p>Вы можете забрать товар сами, заехав в наш офис:</p>
   				<img src="#" alt="Карта" width="300" height="160">
   				<a class="btn contact-us-btn" href="#">Заблудились? Напишите нам!</a>
-  			</section>
+  		</section>
   	</main>
   	<footer class="page-footer">
   		<div class="footer-top"> <!--Верх футера-->
