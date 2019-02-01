@@ -18,7 +18,7 @@
 	  				Интернет-магазин строительных материалов и инструментов для ремонта
 	  			</h1>
   			<p class="header-contacts">
-  					<div class="header-phone-number"><a href="tel:+78125550555">+78125550555</a></div>
+  					<div class="header-phone-number"><a href="tel:+78125550555">+7 (812) 555-05-55</a></div>
   					<p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
   			</p>
   			<div class="user-nav"> <!--Вход/Регистрация-->
@@ -144,9 +144,9 @@
   			<h2>Сервисы</h2>
   			<p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
   			<ul class="slider-services">
-  				<li>Доставка</li>
-  				<li>Гарантия</li>
-  				<li>Кредит</li>
+  				<li><a href="#">Доставка</a></li>
+  				<li><a href="#">Гарантия</a></li>
+  				<li><a href="#">Кредит</a></li>
   			</ul>
   			<div class="service-description service-description-delivery">
   				<h3>Доставка</h3>
@@ -178,8 +178,23 @@
   		<section class="contact-info">
   				<h2>Контакты</h2>
   				<p>Вы можете забрать товар сами, заехав в наш офис:</p>
-  				<img src="img/map.png" alt="Карта" width="300" height="158">
+  				<img src="img/map.png" alt="Адрес офиса: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="300" height="158">
   				<a class="btn contact-us-btn" href="#">Заблудились? Напишите нам!</a>
+  		</section>
+  		<!--ПОПАП с картой-->
+  		<section class="map-popup">
+  			<img src="img/mappopup.png" alt="Адрес офиса: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+  			 <button class="close-popup" aria-label="Закрыть карту"></button>
+  		</section>
+  		<!--ПОПАП с формой-->
+  		<section class="write-us-popup">
+  			<form method="post" action="#" autocomplete="on" name="write-us-form">
+  				<label for="fullname">Ваше имя:<input type="text" id="fullname" placeholder="Имя Фамилия"></label>
+  				<label for="useremail">Ваш e-mail:<input type="email" id="useremail" placeholder="email@example.com"></label>
+  				<label for="userletter">Текст письма:<textarea id="userletter" placeholder="В свободной форме" rows="7" cols="50"></textarea></label>
+  				<input type="submit" name="write-us-sumbit" value="Отправить">
+  				<button class="close-popup" aria-label="Закрыть форму"></button>
+  			</form>
   		</section>
   	</main>
   	<footer class="page-footer">

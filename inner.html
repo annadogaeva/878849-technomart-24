@@ -53,29 +53,25 @@
         <li class="breadcrumbs-current">Перфораторы</li>      </ul>
       <h2>Перфораторы</h2>
       <section class="filters">
+      	<form name="filter" method="post" autocomplete="on">
           <h3>Фильтр:</h3>
           <h4>Цена:</h4>
           <!---INPUT HERE-->
           <section class="filter-producers">
             <h4>Производители:</h4>
-              <!-- 
-                [checkboxes]
-                BOSCH
-                ИНТЕРСКОЛ
-                MAKITA
-                DEWALT
-                HITACHI
-              -->
+            <label for="producer-1"><input type="checkbox" id="producer-1">BOSCH</label>
+            <label for="producer-2"><input type="checkbox" id="producer-2">ИНТЕРСКОЛ</label>
+            <label for="producer-3"><input type="checkbox" id="producer-3">MAKITA</label>
+            <label for="producer-4"><input type="checkbox" id="producer-4">DEWALT</label>
+			<label for="producer-5"><input type="checkbox" id="producer-5">HITACHI</label>
           </section>
           <section class="filter-power">
             <h4>Питание:</h4>
-              <!-- 
-                [radio]
-                Аккумуляторные
-                Сетевые
-              -->
+            <label for="power1"><input name="power" type="radio" id="power1">Аккумуляторные</label>
+            <label for="power2"><input name="power" type="radio" id="power2">Сетевые</label>
           </section>
-          <span class="show-btn">Показать</span> <!--это INPUT SUBMIT - Показать-->
+          <input type="submit" name="filter-submit" value="Показать">
+      	</form>
       </section>
       <!--Секция сортировки здесь-->
       <section class="sorting">
@@ -165,10 +161,18 @@
         <h2>Пара слов о перфораторах</h2>
         <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
       </section>
+      <section class="cart-add-popup">
+      	<strong>Товар добавлен в корзину!</strong>
+      	<div class="popup-buttons">
+      		<a href="#" class="btn submit-order-btn">Оформить заказ</a>
+      		<a href="#" class="btn continue-shopping-btn">Продолжить покупки</a>
+      		<button class="close-popup" aria-label="Закрыть окно"></button>
+      	</div>
+      </section>
   	</main>
   	<footer class="page-footer">
   		<div class="footer-top"> <!--Верх футера-->
-  			<a class="footer-logo"><img src="img/technomart-logo.png" width="220" height="47" alt="Техномарт"></a>
+  			<a class="footer-logo" href="/"><img src="img/technomart-logo.png" width="220" height="47" alt="Техномарт"></a>
   			<p class="footer-contacts">
   				<p class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           <p class="footer-tel"><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
