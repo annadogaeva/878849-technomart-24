@@ -50,13 +50,20 @@
         <li class="home-page"><a href="/"><img alt="Главная" src="#"></a></li>
         <li><a href="#">Каталог</a></li>
         <li><a href="#">Инструмент</a></li>
-        <li class="breadcrumbs-current">Перфораторы</li>      </ul>
+        <li class="breadcrumbs-current">Перфораторы</li>      
+      </ul>
       <h2>Перфораторы</h2>
       <section class="filters">
-      	<form name="filter" method="post" autocomplete="on">
+      	<form name="filter" method="post" autocomplete="on" oninput="pricemaxoutput.value=pricerange.value">
           <h3>Фильтр:</h3>
           <h4>Цена:</h4>
-          <!---INPUT HERE-->
+          <input type="range" min="0" max="40000" step="100" name="pricerange">
+          <div>
+            <output name="priceminoutput">0</output>
+          </div>-
+          <div>
+            <output name="pricemaxoutput">40000</output>
+          </div>
           <section class="filter-producers">
             <h4>Производители:</h4>
             <label for="producer-1"><input type="checkbox" id="producer-1">BOSCH</label>
@@ -77,11 +84,11 @@
       <section class="sorting">
         <h3>Сортировка</h3>
         <ul class="sorting-type">
-          <li>По цене</li>
-          <li>По типу</li>
-          <li>По функционалу</li>
-          <li><span class="visually-hidden">От меньшего к большему</span></li>
-          <li><span class="visually-hidden">От большего к меньшему</span></li>
+          <li><a href="#" class="sorting sorting-active">По цене</a></li>
+          <li><a href="#" class="sorting">По типу</a></li>
+          <li><a href="#" class="sorting">По функционалу</a></li>
+          <li><a href="#" class="sorting arrow arrow-down">По возрастанию</a></li>
+          <li><a href="#" class="sorting arrow arrow-up">По убыванию</a></li>
         </ul>
       </section>
       <section class="catalog"> <!--Карточки перфораторов-->
