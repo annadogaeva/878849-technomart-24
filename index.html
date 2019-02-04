@@ -62,6 +62,8 @@
 	  					<p class="promo-slider-description">Соседям на радость!</p>
   					</div>
   					<a href="inner.html" class="btn to-all-btn">Открыть каталог</a>
+  					<button type="button" class="slider-back-btn" aria-label="Слайд назад"></button>
+  					<button type="button" class="slider-forward-btn" aria-label="Слайд вперед"></button>
   				</li>
   				<!-- второй слайд
   				<li class="promo-item-slider">
@@ -92,25 +94,25 @@
 		            <a href="#"><img src="img/Perforator1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000"></a>
 		            <a href="#"><h3 class="catalog-item-title">Перфоратор BOSCH BFG 9000</h3></a>
 		            <span class="old-price">32500 Р.</span>
-		            <span class="new-price">25500 Р.</span>
+		            <span class="new-price">25500 Р.</span></a>
           		</li>
           		<li class="catalog-item">
 		            <a href="#"><img src="img/Perforator3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000"></a>
 		            <a href="#"><h3 class="catalog-item-title">Перфоратор BOSCH BFG 9000</h3></a>
 		            <span class="old-price">25500 Р.</span>
-		            <span class="new-price">15500 Р.</span>
+		            <span class="new-price">15500 Р.</span></a>
           		</li>
           		<li class="catalog-item">
 		            <a href="#"><img src="img/Perforator2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000"></a>
 		            <a href="#"><h3 class="catalog-item-title">Перфоратор BOSCH BFG 6000</h3></a>
 		            <span class="old-price">30500 Р.</span>
-		            <span class="new-price">25500 Р.</span>
+		            <span class="new-price">25500 Р.</span></a>
           		</li>
           		<li class="catalog-item item-new">
 		            <a href="#"><img src="img/Perforator3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000"></a>
 		            <a href="#"><h3 class="catalog-item-title">Перфоратор BOSCH BFG 2000</h3></a>
 		            <span class="old-price"></span>
-		            <span class="new-price">12500 Р.</span>
+		            <span class="new-price">12500 Р.</span></a>
           		</li>
   			</ul>
   			<div class="popular-heading-container">
@@ -122,16 +124,16 @@
   					<a href="#"><img src="img/bosch.png" alt="BOSCH" width="126" height="37"></a>
   				</li>
   				<li class="producer-item">
-  					<a href="#"><img src="img/makita.png" alt="Makita" width="123" height="40"></a>
+  					<a href="#"><img src="img/Makita.png" alt="Makita" width="123" height="40"></a>
   				</li>
   				<li class="producer-item">
-  					<a href="#"><img src="img/dewalt.png" alt="DeWALT" width="146" height="44"></a>
+  					<a href="#"><img src="img/DeWALT.png" alt="DeWALT" width="146" height="44"></a>
   				</li>
   				<li class="producer-item">
   					<a href="#"><img src="img/interskol.png" alt="Интерскол" width="200" height="88"></a>
   				</li>
   				<li class="producer-item">
-  					<a href="#"><img src="img/hitachi.png" alt="HITACHI" width="169" height="31"></a>
+  					<a href="#"><img src="img/Hitachi.png" alt="HITACHI" width="169" height="31"></a>
   				</li>
   				<li class="producer-item">
   					<a href="#"><img src="img/LG.png" alt="LG" width="121" height="73"></a>
@@ -140,7 +142,7 @@
   					<a href="#"><img src="img/AEG.png" alt="AEG Power solutions" width="151" height="96"></a>
   				</li>
   				<li class="producer-item">
-  					<a href="#"><img src="img/metabo.png" alt="Metabo" width="204" height="69"></a>
+  					<a href="#"><img src="img/Metabo.png" alt="Metabo" width="204" height="69"></a>
   				</li>
   			</ul>
   		</section>
@@ -182,22 +184,24 @@
   		<section class="contact-info">
   				<h2 class="section-heading">Контакты</h2>
   				<p>Вы можете забрать товар сами, заехав в наш офис:</p>
-  				<img src="img/map.png" alt="Адрес офиса: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="300" height="158">
+  				<a href="#" class="open-map-popup"><img src="img/map.png" alt="Адрес офиса: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="300" height="158"></a>
   				<a class="btn to-all-btn" href="#">Заблудились? Напишите нам!</a>
   		</section>
   		<!--ПОПАП с картой-->
   		<section class="map-popup">
+  			<h2 class="visually-hidden">Карта проезда</h2>
   			<img src="img/mappopup.png" alt="Адрес офиса: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-  			 <button class="close-popup" aria-label="Закрыть карту"></button>
+  			 <button class="close-popup" aria-label="Закрыть карту" type="button"></button>
   		</section>
   		<!--ПОПАП с формой-->
   		<section class="write-us-popup">
+  			<h2 class="visually-hidden">Напишите нам</h2>
   			<form method="post" action="#" autocomplete="on" name="write-us-form">
   				<label for="fullname">Ваше имя:<input type="text" id="fullname" placeholder="Имя Фамилия"></label>
   				<label for="useremail">Ваш e-mail:<input type="email" id="useremail" placeholder="email@example.com"></label>
   				<label for="userletter">Текст письма:<textarea id="userletter" placeholder="В свободной форме" rows="7" cols="50"></textarea></label>
   				<input type="submit" name="write-us-sumbit" value="Отправить">
-  				<button class="close-popup" aria-label="Закрыть форму"></button>
+  				<button class="close-popup" aria-label="Закрыть форму" type="button"></button>
   			</form>
   		</section>
   	</main>
