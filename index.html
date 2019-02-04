@@ -7,10 +7,10 @@
   <body>
   	<header class="page-header">
   		<div class="header-top"> <!--Верх хедера-->
-  			<a class="logo header-logo"><img src="img/technomart-logo.png" width="220" height="47" alt="Техномарт"></a>
+  			<a class="header-logo"><img src="img/technomart-logo.png" width="220" height="47" alt="Техномарт"></a>
   			<span class="search-form">Поиск:</span>
-  			<a href="#" class="bookmarks">Закладки: <span class="bookmarks-amount">0</span></a>
-  			<a href="#" class="shopping-cart">Корзина: <span class="shopping-cart-amount">0</span></a>
+  			<a href="#" class="btn bookmarks-btn">Закладки: <span class="bookmarks-amount">0</span></a>
+  			<a href="#" class="btn shopping-cart-btn">Корзина: <span class="shopping-cart-amount">0</span></a>
   			<a href="#" class="btn order-btn">Оформить заказ</a>
   		</div>	
   		<div class="header-middle"> <!--Середина хедера-->
@@ -23,8 +23,8 @@
 	  			</p>
 	  			<div class="user-nav"> <!--Вход/Регистрация-->
 		  			<ul>
-		  				<li class="user-nav-item"><a href="#" class="btn login-btn">Войти</a></li>
-		  				<li class="user-nav-item"><a href="#" class="btn register-btn">Регистрация</a></li>
+		  				<li class="user-nav-item"><a href="#" class="btn user-btn user-login-btn"><!--INLINE SVG icon-login.svg-->Войти</a></li>
+		  				<li class="user-nav-item"><a href="#" class="btn user-btn user-register-btn">Регистрация</a></li>
 		  			</ul>
 	  			</div>
   		</div>
@@ -61,7 +61,7 @@
 	  					<h3 class="promo-slider-heading">Дрели</h3>
 	  					<p class="promo-slider-description">Соседям на радость!</p>
   					</div>
-  					<a href="inner.html" class="btn to-all-btn">Открыть каталог</a>
+  					<a href="inner.html" class="btn to-all-btn to-all-btn-4">Открыть каталог</a>
   					<button type="button" class="slider-back-btn" aria-label="Слайд назад"></button>
   					<button type="button" class="slider-forward-btn" aria-label="Слайд вперед"></button>
   				</li>
@@ -71,7 +71,7 @@
 	  					<h3 class="promo-slider-heading">Перфораторы</h3>
 	  					<p class="promo-slider-description">Настоящие мужские игрушки</p>
   					</div>
-  					<a href="inner.html" class="btn to-all-btn">Открыть каталог</a>
+  					<a href="inner.html" class="btn to-all-btn to-all-btn-4">Открыть каталог</a>
   				</li>
   				`-->
   				<li class="promo-item">
@@ -87,7 +87,7 @@
   		<section class="popular">
   			<div class="popular-heading-container">
   				<h2 class="section-heading-catalog">Популярные товары:</h2>
-  				<a class="btn to-all-btn" href="#">Все популярные товары</a>
+  				<a class="btn to-all-btn to-all-btn-2" href="#">Все популярные товары</a>
   			</div>
   			<ul class="catalog popular-catalog">
   				<li class="catalog-item">
@@ -117,7 +117,7 @@
   			</ul>
   			<div class="popular-heading-container">
   				<h2 class="section-heading-catalog">Популярные производители:</h2>
-  				<a class="btn to-all-btn" href="#">Все производители</a>
+  				<a class="btn to-all-btn to-all-btn-2" href="#">Все производители</a>
   			</div>
   			<ul class="producers popular-producers">
   				<li class="producer-item">
@@ -179,13 +179,13 @@
   					<li class="about-company-cargocompanies-item">Автотрейдинг</li>
   					<li class="about-company-cargocompanies-item">Желдорэкспедиция</li>
   				</ul>
-  				<a class="btn to-all-btn" href="#">Подробнее о компании</a>
+  				<a class="btn to-all-btn to-all-btn-3" href="#">Подробнее о компании</a>
   		</section>
   		<section class="contact-info">
   				<h2 class="section-heading">Контакты</h2>
   				<p>Вы можете забрать товар сами, заехав в наш офис:</p>
   				<a href="#" class="open-map-popup"><img src="img/map.png" alt="Адрес офиса: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="300" height="158"></a>
-  				<a class="btn to-all-btn" href="#">Заблудились? Напишите нам!</a>
+  				<a class="btn to-all-btn to-all-btn-1" href="#">Заблудились? Напишите нам!</a>
   		</section>
   		<!--ПОПАП с картой-->
   		<section class="map-popup">
@@ -207,7 +207,7 @@
   	</main>
   	<footer class="page-footer">
   		<div class="footer-top"> <!--Верх футера-->
-  			<a class="logo footer-logo"><img src="img/technomart-logo.png" width="220" height="47" alt="Техномарт"></a>
+  			<a class="footer-logo"><img src="img/technomart-logo.png" width="220" height="47" alt="Техномарт"></a>
   			<p class="footer-contacts">
   				<p class="footer-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
   				<p class="footer-contacts-phone-number"><a href="tel:+78125550555">+78125550555</a></p>
