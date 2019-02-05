@@ -1,0 +1,532 @@
+/*---------------------ОБЩИЕ И СЛУЖЕБНЫЕ СТИЛИ---------------------*/
+
+	body {
+		box-sizing: border-box;
+		margin: 0;
+
+		font-family: 'PT Sans', 'Myriad Pro', sans-serif;
+		font-size: 13px;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.visually-hidden {
+	  position: absolute;
+	  clip: rect(0 0 0 0);
+	  width: 1px;
+	  height: 1px;
+	  margin: -1px;
+	  …
+	}
+
+	/*Заголовки*/
+
+		.section-heading {
+			color: black;
+			font-family: 'Cuprum', 'Myriad Pro', sans-serif; 
+			font-size: 30px;
+			line-height: 30px;
+			text-transform: uppercase;
+		}
+
+		.section-heading-catalog {
+			color: #32425c;
+			font-family: 'Cuprum', 'Myriad Pro', sans-serif; 
+			font-size: 30px;
+			line-height: 30px;
+			text-transform: uppercase;
+		}
+
+	/*Кнопки "Смотреть все" (красные)*/
+			.to-all-btn {
+				display: block;
+
+				width: 220px; /*ширина по умолчанию*/
+				height: 38px; 
+
+				background-color: #ee3643;
+
+				color: white;
+				font-size: 14px;
+				line-height: 38px; /*=высоте, центровщик*/
+				text-align: center;
+				font-family: 'Cuprum', sans-serif;
+				text-transform: uppercase; 
+				}
+						/*Настройки состояний*/
+								.to-all-btn:hover,
+								.to-all-btn:focus {
+									background-color: #ca2c37;
+								}
+								.to-all-btn:active {
+									background-color: #ba2732;
+								}
+
+						/*Настройки ширины*/
+								.to-all-btn-1 {
+									width: 300px;
+								}
+								.to-all-btn-2 {
+									width: 250px;
+								}
+								.to-all-btn-3 {
+									width: 220px;
+								}
+								.to-all-btn-4 {
+									width: 195px;
+								}
+
+	.wrapper {
+
+	}
+
+/*---------------------СТИЛИ ШАПКИ---------------------*/
+	/*--ОСНОВНЫЕ СТИЛИ ШАПКИ--*/
+		.page-header {
+
+			background-color: #f3f7f8;
+
+			font-size: 17px;
+			font-family: 'Cuprum', 'Myriad Pro', sans-serif;
+	}
+		/*--ВЕРХ ШАПКИ--*/
+			.header-top {
+				padding: 0;
+
+				width: 100%;
+
+				background-color: #32425c;
+
+				color: white;
+				}
+
+				/*ЛОГОТИП*/
+					.header-logo {
+
+					}
+
+				/*ПОИСК*/
+				.header-search {
+					display: block;
+
+					width: 270px;
+					height: 42px;
+
+					line-height: 42px; /*=высоте, центровщик*/
+					}
+							/*Настройки состояний*/
+								.header-search:hover {
+									background-color: #212a3a;
+								}
+
+
+						.search-form { /*форма поиска*/
+							width: 225px;
+
+							border: none;
+
+							background-color: transparent;
+
+							color: white;
+							}
+										.search-form::placeholder {
+											color: white;
+											}	
+
+								/*Настройки состояний*/
+									.search-form:focus {
+											background-color: white;
+
+											color: black;
+
+											box-shadow:10px 1px 0 10px white,
+											34px 1px 0 10px white;
+										}
+
+				/*КНОПКИ*/
+					.bookmarks-btn {
+							display: block;
+
+							width: 150px;
+							height: 42px;
+
+							background-color: transparent;
+							
+							line-height: 42px; /*=высоте, центровщик*/
+							text-align: center;
+							}
+								/*Настройки состояний*/
+									.bookmarks-btn:hover,
+									.bookmarks-btn:focus {
+										background-color: #212a3a;
+									}
+									.bookmarks-btn:active {
+										background-color: #161d29;
+										color: #8b8e94;
+									}
+
+
+						.shopping-cart-btn {
+							display: block;
+
+							width: 150px;
+							height: 42px;
+
+							background-color: transparent;
+
+							line-height: 42px; /*=высоте, центровщик*/
+							text-align: center;
+							}
+
+								/*Настройки состояний*/
+									.shopping-cart-btn:hover,
+									.shopping-cart-btn:focus {
+										background-color: #212a3a;
+										}
+
+									.shopping-cart-btn:active {
+										background-color: #161d29;
+										color: #8b8e94;
+									}
+
+									.shopping-cart-btn-fullcart {
+										background-color: #ee3643;
+										}
+
+									
+
+						.order-btn {
+							display: block;
+
+							width: 150px;
+							height: 42px;
+
+							background-color: #63a63e;
+
+							line-height: 42px; /*=высоте, центровщик*/
+							text-align: center;
+							}
+
+								/*Настройки состояний*/
+									.order-btn:hover,
+									.order-btn:focus {
+										background-color: #5fbb2d;
+									}
+
+									.order-btn:active {
+										background-color: #518534;
+										color: #a8c29a;
+									}
+
+		/*--ОСНОВНАЯ ЧАСТЬ ШАПКИ--*/	
+			.header-main {}
+
+					.page-title {
+						color: #ee3643;
+						font-style: italic;
+						font-size: 16px;
+						line-height: 23px;
+					}
+
+					.header-contacts {
+
+						}
+
+							.header-contacts-phone-number {
+								display: block;
+
+								width: 270px;
+								height: 45px;
+
+								border: 3px solid white;
+
+								color: #ee3643;
+								font-size: 21px;
+								text-align: center;
+								}
+
+							.header-constacts-address {
+								display: block;
+
+								width: 270px;
+								height: 45px;
+
+								color: #32425c;
+								font-size: 14px;
+								text-align: center;
+								}
+
+					.user-nav {
+
+						}
+							.user-nav ul {
+								padding: 0;
+
+								list-style: none;
+								
+									}
+										.user-nav-item {
+
+											}
+												.user-btn {
+													display: inline-block;
+
+													width: 120px; /*ширина по умолчанию*/
+													height: 45px;
+
+													background-color: white;
+
+													color: black;
+													font-size: 21px;
+													line-height: 45px; /*=высоте, центровщик*/
+													text-align: center;
+													}
+															/*Настройки состояний*/
+																.user-btn:hover,
+																.user-btn:focus {
+																	color: #ee3643;
+																}
+
+																.user-btn:active {
+																	color: #c5c5c5;
+																}
+
+															/*Настройки ширины*/				
+																.user-login-btn {
+																	width: 120px;
+																}
+																.user-register-btn {
+																		idth: 150px;
+																}
+
+					.user-info {
+						}
+							.user-card {
+								display: block;
+
+								width: 300px;
+								height: 45px;
+
+								background-color: white;
+
+								text-align: center;
+							}					
+
+								 	.username {
+								 		font-size: 21px;
+								 	}
+								 		/*Настройки состояний*/
+									 		.username:active {
+									 			color: rgba(0, 0, 0, 0.3);
+									 		}
+
+
+					.user-menu {
+						color: #32425c;
+					}
+							.user-menu a {
+								text-decoration: underline;
+							}
+								/*Настройки состояний*/
+									.user-menu a:hover,
+									.user-menu a:focus {
+										color: #ee3643;
+									}
+									.user-menu a:active {
+										color: rgba(0, 0, 0, 0.3);
+									}
+
+							.user-menu li:first-of-type {
+								list-style: none;
+							}
+
+
+		/*--ОСНОВНАЯ НАВИГАЦИЯ--*/												
+			.site-nav {
+				border-bottom: 5px solid #293449;
+
+				background-color: #32425c;
+
+				color: white;
+				}
+					.site-nav ul {
+						padding: 0;
+
+						list-style: none;
+					}	
+					 		.site-nav-item {
+					 			}
+					 				/*Настройки состояний*/
+						 				.site-nav-item:hover,
+						 				.site-nav-item:focus {
+						 					background-color: #293449;
+					 					}
+
+										.site-nav-item:active {
+											background-color: #293449;
+
+											color: #868c95;
+										}
+
+/*------------------------------------------ГЛАВНАЯ СТРАНИЦА---------------------*/
+
+/*---------------------Разделы "О компании", "Контакты"---------------------*/
+	.about-and-contacts {
+		background-color: white;
+	}
+
+	.about-company-cargocompanies {
+		list-style: none;
+
+		font-family: 'Cuprum', 'Myriad Pro', sans-serif; 
+		font-size: 18px;
+		line-height: 40px;
+	}
+
+/*------------------------------------------ВНУТРЕННЯЯ СТРАНИЦА---------------------*/
+	/*---Хлебные крошки---*/
+		.breadcrumbs {
+			list-style: none;
+			text-transform: uppercase;
+		}
+
+	/*---Заголовок страницы каталога---*/
+		.inner-catalog-heading {
+			display: block;
+
+			height: 90px;
+
+			background-color: #f2f6f8;
+		}
+
+	/*---ФИЛЬТРЫ---*/
+		.filters-group-heading {
+			display: block;
+
+			height: 40px;
+			width: 100%;
+
+			background-color: #f7f3ec;
+
+			text-transform: uppercase;
+		}
+
+		.filter-section-heading {
+			font-size: 17px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		.filters fieldset {
+			border: none;
+		}
+
+/*---------------------ПОПАПЫ---------------------*/
+
+	.map-popup {
+		display: none;
+	}
+
+	.write-us-popup {
+		display: none;
+	}
+
+	.cart-add-popup {
+		display: none;
+	}
+
+/*---------------------СТИЛИ ПОДВАЛА---------------------*/
+	/*--ОСНОВНЫЕ СТИЛИ ПОДВАЛА--*/
+		.page-footer {
+			background-color: #32425c;
+
+			font-size: 18px;
+			font-family: 'Cuprum', 'Myriad Pro', sans-serif;
+			color: #f1f5f7;
+	}
+
+		/*--ВЕРХ ПОДВАЛА--*/
+				.footer-top {
+					background-color: #32425c;
+				}
+
+					/*--Навигация--*/
+						.footer-nav {}
+
+								.footer-main-nav {
+									padding: 0;
+
+									list-style: none;
+									}
+										/*Настройки состояний*/
+											.footer-main-nav .footer-nav-item:active {
+												color: #f1f5f7;
+												text-decoration: none;
+											}
+
+								.footer-special-nav {
+									padding: 0;
+
+									list-style: none;
+
+									color: #ffd180;
+									}
+										/*Настройки состояний*/
+											.footer-special-nav .footer-nav-item:active {
+												color: #998a6e;
+												text-decoration: none;
+											}
+
+								/*Общие Настройки состояний*/
+									.footer-nav-item:hover,
+									.footer-nav-item:focus {
+										text-decoration: underline;
+									}
+
+		/*--НИЗ ПОДВАЛА--*/
+				.footer-bottom {
+					background-color: #293449;
+				}
+					/*--Все ссылки--*/
+						.footer-bottom a {
+							color: #ffd180;
+						}
+							/*Настройки состояний*/
+								.footer-bottom a:hover,
+								.footer-bottom a:focus{
+									text-decoration: underline;
+								}
+
+								.footer-bottom a:active {
+									color: #ee3643;
+									text-decoration: none;
+								}
+
+
+					/*--Социальные кнопки--*/
+					.footer-social {
+
+							}
+								.footer-social ul {
+									padding: 0;
+									list-style: none;
+								}
+											.social-btn a {
+												display: block;
+
+												width: 40px;
+												height: 40px;
+
+												background-color: #212a3a;
+
+												border-radius: 50%;
+											}
+												/*Настройки состояний*/
+													.social-btn a:hover,
+													.social-btn a:focus,
+													.social-btn a:active {
+														background-color: #ee3643;
+													}
