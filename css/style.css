@@ -3,9 +3,6 @@
 	body {
 		box-sizing: border-box;
 		margin: 0;
-
-		font-family: 'PT Sans', 'Myriad Pro', sans-serif;
-		font-size: 13px;
 	}
 
 	a {
@@ -22,68 +19,11 @@
 	  …
 	}
 
-	/*Заголовки*/
-
-		.section-heading {
-			color: black;
-			font-family: 'Cuprum', 'Myriad Pro', sans-serif; 
-			font-size: 30px;
-			line-height: 30px;
-			text-transform: uppercase;
-		}
-
-		.section-heading-catalog {
-			color: #32425c;
-			font-family: 'Cuprum', 'Myriad Pro', sans-serif; 
-			font-size: 30px;
-			line-height: 30px;
-			text-transform: uppercase;
-		}
-
-	/*Кнопки "Смотреть все" (красные)*/
-			.to-all-btn {
-				display: block;
-
-				width: 220px; /*ширина по умолчанию*/
-				height: 38px; 
-
-				background-color: #ee3643;
-
-				color: white;
-				font-size: 14px;
-				line-height: 38px; /*=высоте, центровщик*/
-				text-align: center;
-				font-family: 'Cuprum', sans-serif;
-				text-transform: uppercase; 
-				}
-						/*Настройки состояний*/
-								.to-all-btn:hover,
-								.to-all-btn:focus {
-									background-color: #ca2c37;
-								}
-								.to-all-btn:active {
-									background-color: #ba2732;
-								}
-
-						/*Настройки ширины*/
-								.to-all-btn-1 {
-									width: 300px;
-								}
-								.to-all-btn-2 {
-									width: 250px;
-								}
-								.to-all-btn-3 {
-									width: 220px;
-								}
-								.to-all-btn-4 {
-									width: 195px;
-								}
-
 	.wrapper {
 
 	}
 
-/*---------------------СТИЛИ ШАПКИ---------------------*/
+/*---------------------ШАПКА---------------------*/
 	/*--ОСНОВНЫЕ СТИЛИ ШАПКИ--*/
 		.page-header {
 
@@ -243,9 +183,12 @@
 
 								border: 3px solid white;
 
+								background: url(../img/icon-phone.svg) no-repeat 5% 50%;
+
 								color: #ee3643;
 								font-size: 21px;
 								text-align: center;
+								line-height: 45px;
 								}
 
 							.header-constacts-address {
@@ -371,74 +314,349 @@
 											color: #868c95;
 										}
 
-/*------------------------------------------ГЛАВНАЯ СТРАНИЦА---------------------*/
-
-/*---------------------Разделы "О компании", "Контакты"---------------------*/
-	.about-and-contacts {
-		background-color: white;
+/*---------------------ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ---------------------*/
+	main {
+		font-family: 'PT Sans', 'Myriad Pro', sans-serif;
+		font-size: 13px;
 	}
 
-	.about-company-cargocompanies {
-		list-style: none;
+	/*Заголовки*/
 
-		font-family: 'Cuprum', 'Myriad Pro', sans-serif; 
-		font-size: 18px;
-		line-height: 40px;
-	}
+		.section-heading {
+			color: black;
+			font-family: 'Cuprum', 'Myriad Pro', sans-serif; 
+			font-size: 30px;
+			line-height: 30px;
+			text-transform: uppercase;
+		}
 
-/*------------------------------------------ВНУТРЕННЯЯ СТРАНИЦА---------------------*/
-	/*---Хлебные крошки---*/
-		.breadcrumbs {
+		.section-heading-catalog {
+			color: #32425c;
+			font-family: 'Cuprum', 'Myriad Pro', sans-serif; 
+			font-size: 30px;
+			line-height: 30px;
+			text-transform: uppercase;
+		}
+
+	/*Кнопки "Смотреть все" (красные)*/
+			.to-all-btn {
+				display: block;
+
+				width: 220px; /*ширина по умолчанию*/
+				height: 38px; 
+				border-radius: 3px; 
+
+				background-color: #ee3643;
+
+				color: white;
+				font-size: 14px;
+				line-height: 38px; /*=высоте, центровщик*/
+				text-align: center;
+				font-family: 'Cuprum', sans-serif;
+				text-transform: uppercase; 
+				}
+						/*Настройки состояний*/
+								.to-all-btn:hover,
+								.to-all-btn:focus {
+									background-color: #ca2c37;
+								}
+								.to-all-btn:active {
+									background-color: #ba2732;
+								}
+
+						/*Настройки ширины*/
+								.to-all-btn-1 {
+									width: 300px;
+								}
+								.to-all-btn-2 {
+									width: 250px;
+								}
+								.to-all-btn-3 {
+									width: 220px;
+								}
+								.to-all-btn-4 {
+									width: 195px;
+								}
+
+	/*------------------------------------------ГЛАВНАЯ СТРАНИЦА---------------------*/
+
+		/*---------------------Разделы "О компании", "Контакты"---------------------*/
+			.about-and-contacts {
+				background-color: white;
+			}
+
+			.about-company-cargocompanies {
+				list-style: none;
+
+				font-family: 'Cuprum', 'Myriad Pro', sans-serif; 
+				font-size: 18px;
+				line-height: 40px;
+			}
+
+					.about-company-cargocompanies-item {
+						position: relative;
+
+						padding-left: 10px;
+					}
+							.about-company-cargocompanies-item::before {
+								content: "";
+
+								position: absolute;
+								left: -25px;
+								top: 18px;
+
+								display: block;
+
+								width: 25px;
+								height: 2px;
+
+								background-color: #ee3643;
+							}
+
+	/*------------------------------------------ВНУТРЕННЯЯ СТРАНИЦА---------------------*/
+		/*---Хлебные крошки---*/
+			.breadcrumbs {
+				list-style: none;
+				text-transform: uppercase;
+			}
+					.breadcrumb-home-page {
+						width: 15px;
+						height: 15px;
+
+						background: url(../img/icon-home.svg) no-repeat 50% center;
+					}
+
+		/*---Заголовок страницы каталога---*/
+			.inner-catalog-heading {
+				display: block;
+
+				height: 90px;
+
+				background-color: #f2f6f8;
+			}
+
+		/*---ФИЛЬТРЫ---*/
+			.filters-group-heading {
+				display: block;
+
+				width: 100%;
+
+				background-color: #f7f3ec;
+
+				text-transform: uppercase;
+			}
+
+			.filter-section-heading {
+				font-size: 17px;
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+
+			.filter-form fieldset {
+				border-top: 0;
+				border-left: 0;
+				border-right: 0;
+				border-bottom: 1px solid #e5e5e5;
+			}
+					.filter-form fieldset:last-of-type {
+						border: 0;
+					}
+
+			.filter-form label {
+				text-transform: uppercase;
+				font-size: 15px;
+			}
+
+			.show-filtration-btn {
+				display: block;
+				box-sizing: border-box;
+				width: 140px;
+				height: 38px; 
+				border: 1px solid #e5e5e5;
+							
+				background-color: transparent;
+
+				color: black;
+				font-size: 13px;
+				line-height: 38px; /*=высоте, центровщик*/
+				text-align: center;
+				text-transform: uppercase;
+			}
+
+	/*---КАРТОЧКИ ТОВАРОВ---*/
+
+		.catalog {
 			list-style: none;
-			text-transform: uppercase;
+			padding: 0;
+		}
+				.catalog-item {
+					display: inline-block;
+
+					width: 220px;
+					height: 318px;
+
+					border: 1px solid #e5e5e5;
+
+					text-align: center;
+
+					position: relative;
+					z-index: 50;
+					}
+							.catalog-item-title {
+								margin: 10px 0 10px 0;
+
+								font-size: 18px;
+								font-weight: bold;
+							}
+
+							.old-price {
+								display: block;
+
+								margin-bottom: 10px;
+
+								font-size: 17px;
+								font-weight: bold;
+								color: #999999;
+								text-decoration: line-through;
+								}
+
+							.new-price {
+								display: block;
+
+								width: 122px;
+								height: 38px;
+
+								margin: 0 auto;
+
+								background-color: #ee3643;
+
+								font-size: 17px;
+								font-weight: bold;
+								color: white;
+								line-height: 38px; /*вертикальный центровщик*/
+							}
+
+				/*Настройки состояний*/
+						.item-new {
+						}
+								.item-new::after {
+									content: "";
+
+									display: block;
+									width: 60px;
+									height: 59px;
+
+									position: absolute;
+									z-index: 90;
+									top: 0px;
+									right: 0;
+
+									background: url('../img/new-flag.png')
+								}
+
+						.catalog-item-hover {
+							display: none;
+
+						}
+
+						.catalog-item:hover,
+						.catalog-item:focus {
+							box-shadow: 0px 10px 25px 0px rgba(41, 52, 73, 0.5);
+						}
+
+						.catalog-item:hover .catalog-item-unhover,
+						.catalog-item:focus .catalog-item-unhover {
+							display: none;
+						}
+
+						.catalog-item:hover .catalog-item-hover,
+						.catalog-item:focus .catalog-item-hover {
+							margin-top: 1px;
+
+							display: block;
+
+							width: 218px;
+							height: 172px;
+
+							text-align: center;
+						}
+
+						/*КНОПКИ ПРИ НАВЕДЕНИИ НА КАРТОЧКУ*/
+								.item-buy-btn { 			/*кнопка "Купить"*/
+								display: block;
+								box-sizing: border-box;
+								width: 135px;
+								height: 38px;
+								border-bottom: 3px solid #367315;
+								border-radius: 3px; 
+								margin: 0 auto;
+								
+								background-color: #63a63e;
+
+								color: white;
+								font-size: 14px; 
+								line-height: 38px; /*=высоте, центровщик*/
+								text-align: center;
+								font-family: 'Cuprum', sans-serif;
+								text-transform: uppercase;
+								}
+										/*Настройки состояний*/
+											.item-buy-btn:hover,
+											.item-buy-btn:focus {
+												background-color: #5fbb2d;
+											}
+
+											.item-buy-btn:active {
+												background-color: #518534;
+												border: none;
+											}
+
+								.item-bookmark-btn { 			/*кнопка "В закладки"*/
+									display: block;
+									box-sizing: border-box;
+									width: 135px;
+									height: 38px; 
+									border: 3px solid #63a63e;
+									border-radius: 3px; 
+									margin: 0 auto;
+
+									background-color: transparent;
+
+									color: #32425c;
+									font-size: 14px; 
+									line-height: 32px; /*высота минус бордер, центровщик*/
+									text-align: center;
+									font-family: 'Cuprum', sans-serif;
+									text-transform: uppercase;
+								}
+
+										/*Настройки состояний*/
+											.item-bookmark-btn:hover,
+											.item-bookmark-btn:focus {
+												border-color: rgba(50, 66, 92, 1);
+											}
+
+											.item-bookmark-btn:active {
+												border-color: rgba(50, 66, 92, 0.3);
+
+												color: rgba(50, 66, 92, 0.3);
+											}
+
+	/*---------------------ПОПАПЫ---------------------*/
+
+		.map-popup {
+			display: none;
 		}
 
-	/*---Заголовок страницы каталога---*/
-		.inner-catalog-heading {
-			display: block;
-
-			height: 90px;
-
-			background-color: #f2f6f8;
+		.write-us-popup {
+			display: none;
 		}
 
-	/*---ФИЛЬТРЫ---*/
-		.filters-group-heading {
-			display: block;
-
-			height: 40px;
-			width: 100%;
-
-			background-color: #f7f3ec;
-
-			text-transform: uppercase;
+		.cart-add-popup {
+			display: none;
 		}
 
-		.filter-section-heading {
-			font-size: 17px;
-			text-transform: uppercase;
-			font-weight: bold;
-		}
-
-		.filters fieldset {
-			border: none;
-		}
-
-/*---------------------ПОПАПЫ---------------------*/
-
-	.map-popup {
-		display: none;
-	}
-
-	.write-us-popup {
-		display: none;
-	}
-
-	.cart-add-popup {
-		display: none;
-	}
-
-/*---------------------СТИЛИ ПОДВАЛА---------------------*/
+/*---------------------ПОДВАЛ---------------------*/
 	/*--ОСНОВНЫЕ СТИЛИ ПОДВАЛА--*/
 		.page-footer {
 			background-color: #32425c;
@@ -529,4 +747,16 @@
 													.social-btn a:focus,
 													.social-btn a:active {
 														background-color: #ee3643;
+													}
+
+													.social-btn-vk {
+													 	background: url(../img/vk-icon.svg) no-repeat 50% center;
+													}
+
+													.social-btn-fb {
+														background: url(../img/fb-icon.svg) no-repeat 50% center;
+													}
+
+													.social-btn-inst {
+														background: url(../img/insta-icon.svg) no-repeat 50% center;
 													}
