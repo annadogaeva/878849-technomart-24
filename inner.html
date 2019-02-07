@@ -13,7 +13,7 @@
   <body>
   	<header class="page-header">
   		<div class="header-top"> <!--Верх хедера-->
-  			<a class="header-logo"><img src="img/technomart-logo.png" width="220" height="47" alt="Техномарт"></a>
+  			<a class="header-logo" href="index.html"><img src="img/technomart-logo.png" width="220" height="47" alt="Техномарт"></a>
   			<span class="header-search"><input type="text" id="searchform" class="search-form" placeholder="Поиск:"></span>
   			<a href="#" class="bookmarks-btn">Закладки: <span class="bookmarks-amount">0</span></a>
   			<a href="#" class="shopping-cart-btn">Корзина: <span class="shopping-cart-amount">0</span></a>
@@ -42,7 +42,7 @@
   		</div>
   		<nav class="site-nav"> <!--Меню навигации-->
 		  		<ul>
-		  			<li class="site-nav-item"><a href="/">Главная</a></li>
+		  			<li class="site-nav-item"><a href="index.html">Главная</a></li>
 		  			<li class="site-nav-item"><a href="#">Компания</a></li>
 		  			<li class="site-nav-item"><a href="inner.html">Каталог</a></li>
 		  			<li class="site-nav-item"><a href="#">Новости</a></li>
@@ -54,7 +54,7 @@
   	</header>
   	<main>
 	  	<ul class="breadcrumbs"> <!--Хлебные крошки-->
-	        <li class="breadcrumb-item breadcrumb-home-page"><a href="/"><!--ФОНОВЫЙ SVG icon-home.svg--><span class="visually-hidden">Главная</span></a></li>
+	        <a href="index.html"><li class="breadcrumb-item breadcrumb-home-page"><span class="visually-hidden">Главная</span></li></a>
 	        <li class="breadcrumb-item"><a href="#">Каталог</a></li>
 	        <li class="breadcrumb-item"><a href="#">Инструмент</a></li>
 	        <li class="breadcrumb-item breadcrumb-current">Перфораторы</li>      
@@ -66,11 +66,13 @@
 	          <h3 class="filters-group-heading">Фильтр:</h3>
 		        <fieldset class="filter-price-range">
 		          <legend class="filter-section-heading">Цена:</legend>
-		          <input type="range" min="0" max="40000" step="100" name="pricerange">
-		          <div>
+		          <div class="price-range">
+		          	<input type="range" min="0" max="40000" step="100" name="pricerange">
+		          </div>
+		          <div class="price-output">
 		            <output name="priceminoutput">0</output>
 		          </div>-
-		          <div>
+		          <div class="price-output">
 		            <output name="pricemaxoutput">40000</output>
 		          </div>
 		      	</fieldset>
@@ -95,10 +97,10 @@
 	        <h3>Сортировка:</h3>
 	        <ul class="sorting-type">
 	          <li><a href="#" class="sorting-item sorting-item-active">По цене</a></li>
-	          <li><a href="#" class="sorting-ite">По типу</a></li>
-	          <li><a href="#" class="sorting-item">По функционалу</a></li>
-	          <li><a href="#" class="sorting-item arrow arrow-down">По возрастанию</a></li>
-	          <li><a href="#" class="sorting-item arrow arrow-up">По убыванию</a></li>
+	          <li><a href="#" class="sorting-item sorting-item-normal">По типу</a></li>
+	          <li><a href="#" class="sorting-item sorting-item-normal">По функционалу</a></li>
+	          <li><a href="#" class="sorting-item sorting-item-active arrow arrow-down">По возрастанию</a></li>
+	          <li><a href="#" class="sorting-item sorting-item-normal arrow arrow-up">По убыванию</a></li>
 	        </ul>
 	    </section>
 	    <section class="inner-catalog-section"> <!--Карточки перфораторов-->
@@ -196,10 +198,10 @@
 	          </li>
 	        </ul>
 	        <ul class="pagination">
-	          <li class="btn pagination-btn pagination-btn-current">1</li>
-	          <li class="btn pagination-btn"><a href="#">2</a></li>
-	          <li class="btn pagination-btn"><a href="#">3</a></li>
-	          <li class="btn pagination-btn pagination-btn-next"><a href="#">Следующая</a></li>
+	          <li class="pagination-btn pagination-btn-current">1</li>
+	          <li class="pagination-btn pagination-btn-normal"><a href="#">2</a></li>
+	          <li class="pagination-btn pagination-btn-normal"><a href="#">3</a></li>
+	          <li class="pagination-btn pagination-btn-normal pagination-btn-next"><a href="#">Следующая</a></li>
 	        </ul>
 	    </section>
 	    <section class="about-items">
@@ -217,7 +219,7 @@
   	</main>
 	 <footer class="page-footer">
   		<div class="footer-top"> <!--Верх футера-->
-  			<a class="footer-logo"><img src="img/technomart-logo.png" width="220" height="47" alt="Техномарт"></a>
+  			<a class="footer-logo" href="index.html"><img src="img/technomart-logo.png" width="220" height="47" alt="Техномарт"></a>
   			<p class="footer-contacts">
   				<p class="footer-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
   				<p class="footer-contacts-phone-number"><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
