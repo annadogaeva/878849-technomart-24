@@ -1,7 +1,14 @@
 /*---------------------ОБЩИЕ И СЛУЖЕБНЫЕ СТИЛИ---------------------*/
 
-	body {
+	*, *::before, *::after {
+		box-sizing: inherit;
+	}
+
+	html {
 		box-sizing: border-box;
+	}
+
+	body {
 		margin: 0;
 	}
 
@@ -19,8 +26,9 @@
 	  …
 	}
 
-	.wrapper {
-
+	.container {
+		width: 940px;
+		margin: 0 auto;
 	}
 
 /*---------------------ШАПКА---------------------*/
@@ -29,28 +37,40 @@
 
 			background-color: #f3f7f8;
 
+			padding-bottom: 60px;
+
 			font-size: 17px;
 			font-family: 'Cuprum', 'Myriad Pro', sans-serif;
 	}
 		/*--ВЕРХ ШАПКИ--*/
 			.header-top {
+				display: flex;
+				flex-direction: row;
+				align-items: flex-start;
+				justify-content: space-around;
+
 				padding: 0;
 
 				width: 100%;
+				min-height: 42px;
 
-				background-color: #32425c;
+				background-color: #293449;
 
 				color: white;
 				}
 
+				.header-top .container {
+					display: flex;
+				}
+
 				/*ЛОГОТИП*/
 					.header-logo {
-
+						position: absolute;
 					}
 
 				/*ПОИСК*/
 				.header-search {
-					display: block;
+					margin-left: 220px;
 
 					width: 270px;
 					height: 42px;
@@ -82,14 +102,12 @@
 
 											color: black;
 
-											box-shadow:10px 1px 0 10px white,
-											34px 1px 0 10px white;
+											box-shadow:9px 0px 0 11px white,
+											34px 0px 0 11px white;
 										}
 
 				/*КНОПКИ*/
 					.bookmarks-btn {
-							display: block;
-
 							width: 150px;
 							height: 42px;
 
@@ -110,8 +128,6 @@
 
 
 						.shopping-cart-btn {
-							display: block;
-
 							width: 150px;
 							height: 42px;
 
@@ -139,8 +155,6 @@
 									
 
 						.order-btn {
-							display: block;
-
 							width: 150px;
 							height: 42px;
 
@@ -162,9 +176,24 @@
 									}
 
 		/*--ОСНОВНАЯ ЧАСТЬ ШАПКИ--*/	
-			.header-main {}
+			.header-main {
+				display: flex;
+				justify-content: space-between;
+
+				padding-top: 46px;
+				padding-bottom: 40px;
+				padding-left: 53px;
+
+				min-height: 75px;
+			}
 
 					.page-title {
+						width: 205px;
+						margin: 0;
+						margin-bottom: auto;
+
+						padding-top: 3px;
+
 						color: #ee3643;
 						font-style: italic;
 						font-size: 16px;
@@ -172,6 +201,7 @@
 					}
 
 					.header-contacts {
+						margin-bottom: auto;
 
 						}
 
@@ -181,6 +211,9 @@
 								width: 270px;
 								height: 45px;
 
+								padding-top: 0px;
+								padding-left: 20px;
+
 								border: 3px solid white;
 
 								background: url(../img/icon-phone.svg) no-repeat 5% 50%;
@@ -188,27 +221,36 @@
 								color: #ee3643;
 								font-size: 21px;
 								text-align: center;
-								line-height: 45px;
+								line-height: 40px;
 								}
 
 							.header-constacts-address {
 								display: block;
 
-								width: 270px;
-								height: 45px;
+								width: 278px;
+
+								margin: 8px 0 auto 0;
+								padding-left: 10px;
 
 								color: #32425c;
 								font-size: 14px;
-								text-align: center;
 								}
 
 					.user-nav {
+						margin-bottom: auto;
 
 						}
 							.user-nav ul {
 								padding: 0;
+								margin: 0;
+
+								width: 280px;
 
 								list-style: none;
+
+								display: flex;
+								justify-content: space-between;
+								align-content: flex-start;
 								
 									}
 										.user-nav-item {
@@ -242,7 +284,7 @@
 																	width: 120px;
 																}
 																.user-register-btn {
-																		idth: 150px;
+																		width: 150px;
 																}
 
 					.user-info {
@@ -269,6 +311,8 @@
 
 					.user-menu {
 						color: #32425c;
+
+						display: flex;
 					}
 							.user-menu a {
 								text-decoration: underline;
@@ -284,23 +328,35 @@
 
 							.user-menu li:first-of-type {
 								list-style: none;
+
+								margin-right: 30px;
 							}
 
 
 		/*--ОСНОВНАЯ НАВИГАЦИЯ--*/												
 			.site-nav {
-				border-bottom: 5px solid #293449;
 
 				background-color: #32425c;
 
 				color: white;
 				}
 					.site-nav ul {
-						padding: 0;
+						display: flex;
+						justify-content: space-around;
+						align-items: center;
 
+						min-height: 64px;
+
+						margin: 0;
 						list-style: none;
+
+						padding-left: 21px;
+						padding-right: 21px;
+						border-bottom: 5px solid #293449;
 					}	
 					 		.site-nav-item {
+					 			padding: 20px 30px;
+
 					 			}
 					 				/*Настройки состояний*/
 						 				.site-nav-item:hover,
@@ -328,6 +384,8 @@
 			font-size: 30px;
 			line-height: 30px;
 			text-transform: uppercase;
+
+			margin: 0;
 		}
 
 		.section-heading-catalog {
@@ -336,6 +394,8 @@
 			font-size: 30px;
 			line-height: 30px;
 			text-transform: uppercase;
+
+			margin: 0;
 		}
 
 	/*Кнопки "Смотреть все" (красные)*/
@@ -511,7 +571,7 @@
 					display: inline-block;
 
 					padding: 0;
-					list-style: 0;
+					list-style: none;
 				}
 					.services-slider-item {
 						width: 240px;
@@ -567,10 +627,28 @@
 		/*---------------------Разделы "О компании", "Контакты"---------------------*/
 			.about-and-contacts {
 				background-color: white;
+
+				display: flex;
+				justify-content: space-between;
+
+				padding-top: 79px;
+				padding-bottom: 85px;
+			}
+
+			.about-company-description {
+				margin-top: 25px;
+
+				width: 520px;
+
+				line-height: 24px;
 			}
 
 			.about-company-cargocompanies {
 				list-style: none;
+				margin: 0;
+				margin-top: 10px;
+
+				padding-left: 25px;
 
 				font-family: 'Cuprum', 'Myriad Pro', sans-serif; 
 				font-size: 18px;
@@ -597,17 +675,50 @@
 								background-color: #ee3643;
 							}
 
+					.about-company-more-btn {
+						margin-top: 25px;
+					}
+
+			.pickup-in-office {
+				width: 185px;
+
+				margin-top: 25px;
+
+				line-height: 24px;
+			}
+
+			.open-map-popup {
+				display: block;
+
+				margin-top: 30px;
+			}
+
+			.contact-info-write-us-btn {
+				margin-top: 40px;
+			}
+
 	/*------------------------------------------ВНУТРЕННЯЯ СТРАНИЦА---------------------*/
 		/*---Хлебные крошки---*/
 			.breadcrumbs {
 				list-style: none;
 				text-transform: uppercase;
+
+				margin: 0;
+				padding: 0;
+				min-height: 60px;
+
+				display: flex;
+				align-items: center;
 			}
 					.breadcrumb-home-page {
 						width: 15px;
 						height: 15px;
 
 						background: url(../img/icon-home.svg) no-repeat 50% center;
+					}
+
+					.breadcrumb-item:not(.breadcrumb-home-page) {
+						margin-left: 40px;
 					}
 
 		/*---Заголовок страницы каталога---*/
@@ -617,7 +728,17 @@
 				height: 90px;
 
 				background-color: #f2f6f8;
+
+				padding: 30px;
 			}
+		.filter-catalog-flex {
+			display: flex;
+		}
+
+		.catalog-flex {
+			display: flex;
+			flex-direction: column;
+		}
 
 		/*---ФИЛЬТРЫ---*/
 			.filters-group-heading {
@@ -634,13 +755,28 @@
 				font-size: 17px;
 				text-transform: uppercase;
 				font-weight: bold;
+
+				margin-bottom: 15px;
 			}
+
+			.filter-list {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			.filter-list li {
+				margin-bottom: 15px;
+			}
+
 
 			.filter-form fieldset {
 				border-top: 0;
 				border-left: 0;
 				border-right: 0;
 				border-bottom: 1px solid #e5e5e5;
+
+				padding: 0;
 			}
 					.filter-form fieldset:last-of-type {
 						border: 0;
@@ -656,6 +792,11 @@
 				height: 80px;
 
 				background-color: #f7f3ec;
+
+			}
+
+			.price-outputs {
+				text-align: center;
 			}
 
 			.price-output {
@@ -665,6 +806,9 @@
 				background-color: #f7f3ec;
 
 				font-size: 17px;
+
+				display: inline-block;
+				text-align: center;
 			}
 
 			.show-filtration-btn {
@@ -684,30 +828,43 @@
 			}
 
 		/*---СОРТИРОВКА---*/
-			.sorting-type {
-				padding: 0;
-				list-style: none;
+
+			.sorting {
+				display: flex;
 			}
 
-			.sorting-item {
-				color: #cacaca;
-				border-bottom: 1px dashed #f06870;
-				}
-				/*Настройки состояний*/
-						.sorting-item-normal:hover {
-							color: black;
-							border-bottom: 1px solid #f06870;
-						}
+				.sorting-type {
+					padding: 0;
+					list-style: none;
 
-						.sorting-item-active {
-							color: #f06870;
-							border: none;
-						}
+					display: flex;
+				}
+
+				.sorting-item {
+					color: #cacaca;
+					border-bottom: 1px dotted #f06870;
+					}
+					/*Настройки состояний*/
+							.sorting-item-normal:hover {
+								color: black;
+								border-bottom: 1px solid #f06870;
+							}
+
+							.sorting-item-active {
+								color: #f06870;
+								border: none;
+							}
 
 		/*---ПАГИНАЦИЯ---*/
 			.pagination {
 				list-style: none;
 				padding: 0;
+				margin-top: 50px;
+
+				width: 290px;
+
+				display: flex;
+				justify-content: space-between;
 			}
 
 				.pagination-btn {
@@ -762,6 +919,10 @@
 		.catalog {
 			list-style: none;
 			padding: 0;
+
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
 		}
 				.catalog-item {
 					display: inline-block;
@@ -775,6 +936,8 @@
 
 					position: relative;
 					z-index: 50;
+
+					margin-top: 20px;
 					}
 							.catalog-item-title {
 								margin: 10px 0 10px 0;
@@ -938,17 +1101,43 @@
 			font-size: 18px;
 			font-family: 'Cuprum', 'Myriad Pro', sans-serif;
 			color: #f1f5f7;
+
 	}
 
 		/*--ВЕРХ ПОДВАЛА--*/
 				.footer-top {
 					background-color: #32425c;
+
+					min-height: 195px;
 				}
 
+					.footer-top .container {
+						display: flex;
+					}
+
+
+					.footer-companyinfo {
+						display: flex;
+						flex-direction: column;
+
+						width: 340px;
+
+					}
+
 					/*--Навигация--*/
-						.footer-nav {}
+						.footer-nav {
+							display: flex;
+							flex-direction: column;
+
+							width: 590px;
+
+						}
 
 								.footer-main-nav {
+									display: flex;
+									justify-content: flex-end;
+
+									margin: 0;
 									padding: 0;
 
 									list-style: none;
@@ -960,6 +1149,10 @@
 											}
 
 								.footer-special-nav {
+									display: flex;
+									justify-content: flex-end;
+
+									margin: 0;
 									padding: 0;
 
 									list-style: none;
@@ -978,10 +1171,44 @@
 										text-decoration: underline;
 									}
 
+
+								.footer-nav-item {
+									margin-top: 40px;
+									margin-left: 60px;
+								}
+
 		/*--НИЗ ПОДВАЛА--*/
 				.footer-bottom {
 					background-color: #293449;
+
+					padding-top: 35px;
+
+					min-height: 105px;
 				}
+
+				.footer-bottom .container {
+					display: flex;
+					justify-content: space-between;
+				}
+
+				.footer-contacts {
+					margin: 0;
+				}
+ 
+				.footer-contacts-address {
+					margin-top: 23px;
+					margin-bottom: 0;
+
+					padding-left: 3px;
+				}
+
+				.footer-contacts-phone-number {
+					margin-top: 3px;
+					margin-bottom: 0;
+
+					padding-left: 3px;
+				}
+
 					/*--Все ссылки--*/
 						.footer-bottom a {
 							color: #ffd180;
@@ -999,38 +1226,55 @@
 
 
 					/*--Социальные кнопки--*/
-					.footer-social {
+						.footer-social {
 
-							}
-								.footer-social ul {
-									padding: 0;
-									list-style: none;
 								}
-											.social-btn a {
-												display: block;
+									.footer-social ul {
+										display: flex;	
 
-												width: 40px;
-												height: 40px;
+										padding: 0;
+										list-style: none;
+									}
 
-												background-color: #212a3a;
-
-												border-radius: 50%;
+											.social-btn {
+													padding-left: 5px;
 											}
-												/*Настройки состояний*/
-													.social-btn a:hover,
-													.social-btn a:focus,
-													.social-btn a:active {
-														background-color: #ee3643;
-													}
 
-													.social-btn-vk {
-													 	background: url(../img/vk-icon.svg) no-repeat 50% center;
-													}
+												.social-btn a {
+													display: block;
 
-													.social-btn-fb {
-														background: url(../img/fb-icon.svg) no-repeat 50% center;
-													}
+													width: 40px;
+													height: 40px;
 
-													.social-btn-inst {
-														background: url(../img/insta-icon.svg) no-repeat 50% center;
-													}
+													
+
+													background-color: #212a3a;
+
+													border-radius: 50%;
+												}
+													/*Настройки состояний*/
+														.social-btn a:hover,
+														.social-btn a:focus,
+														.social-btn a:active {
+															background-color: #ee3643;
+														}
+
+														.social-btn-vk {
+														 	background: url(../img/vk-icon.svg) no-repeat 50% center;
+														}
+
+														.social-btn-fb {
+															background: url(../img/fb-icon.svg) no-repeat 50% center;
+														}
+
+														.social-btn-inst {
+															background: url(../img/insta-icon.svg) no-repeat 50% center;
+														}
+
+					.footer-feedback {
+						width: 150px;
+					}
+
+					.footer-dev-link {
+						width: 110px;
+					}
