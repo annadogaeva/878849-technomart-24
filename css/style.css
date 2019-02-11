@@ -65,15 +65,32 @@
 
 				/*ЛОГОТИП*/
 					.header-logo {
+						display: block;
+						width: 220px;
+						height: 47px;
+
 						position: absolute;
+
+						border-bottom: 5px solid #b52933;
+
+						background-color: #ee3643;
+
+						text-align: center;
+						line-height: 55px;
+					}
+
+					.header-logo:hover {
+						background-color: #ca2c37;
+
+						border-bottom: 5px solid #9a212a;
 					}
 
 				/*ПОИСК*/
 				.header-search {
-					margin-left: 220px;
-
 					width: 270px;
 					height: 42px;
+
+					margin-left: 220px;
 
 					line-height: 42px; /*=высоте, центровщик*/
 					}
@@ -288,6 +305,9 @@
 																}
 
 					.user-info {
+
+						margin: auto;
+
 						}
 							.user-card {
 								display: block;
@@ -311,6 +331,9 @@
 
 					.user-menu {
 						color: #32425c;
+
+						margin: 0;
+						padding: 0;
 
 						display: flex;
 					}
