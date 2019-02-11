@@ -79,10 +79,17 @@
 						line-height: 55px;
 					}
 
-					.header-logo:hover {
+					.header-logo:hover,
+					.header-logo:focus {
 						background-color: #ca2c37;
 
 						border-bottom: 5px solid #9a212a;
+					}
+
+					.header-logo:active {
+						background-color: #ba2732;
+
+						border-bottom: 5px solid #8e1e26;
 					}
 
 				/*ПОИСК*/
@@ -119,8 +126,6 @@
 
 											color: black;
 
-											box-shadow:9px 0px 0 11px white,
-											34px 0px 0 11px white;
 										}
 
 				/*КНОПКИ*/
@@ -463,10 +468,46 @@
 
 	/*------------------------------------------ГЛАВНАЯ СТРАНИЦА---------------------*/
 		/*---------------------Раздел "ПРОМО"---------------------*/
-			.promo-cards {
+			.promo {
+				padding-top: 60px;
+				padding-bottom: 51px;
+			}
+
+			.promo-cards-top {
 				list-style: none;
 				margin: 0;
+				padding: 0;
+
+				display: flex;
+				justify-content: space-between;
 			}
+
+			.promo-cards-bottom {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.promo-cards-right {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				display: flex;
+				flex-direction: column;
+			}
+
+					.promo-cards-right .promo-item {
+						margin-top: 18px;
+					}
+
+			.promo-cards-slider {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				margin-top: 19px;
+			}
+
 					.promo-item {
 						width: 300px;
 						height: 125px;
@@ -481,6 +522,13 @@
 					.promo-card-heading {
 						font-size: 24px;
 						font-weight: bold;
+
+						font-family: 'Cuprum', sans-serif;
+
+						margin: 0;
+						margin-left: 23px;
+						margin-top: 23px;
+						
 					}
 
 					.promo-btn {
@@ -489,12 +537,17 @@
 						height: 38px; 
 						
 						background-color: rgba(0, 0, 0, 0.1);
+						border-radius: 3px; 
 
 						font-size: 14px;
 						line-height: 38px; /*=высоте, центровщик*/
 						text-align: center;
 						font-family: 'Cuprum', sans-serif;
 						text-transform: uppercase;
+
+						margin-left: 25px;
+						margin-top: 14px;
+
 					}
 								/*Настройки состояний*/
 									.promo-btn:hover,
@@ -530,6 +583,7 @@
 								background-color: #8ed78f;
 								background-image: url('../img/icon-4.svg');
 								background-position: 82% 47%;
+
 							}
 
 							.promo-item-delivery {
@@ -544,15 +598,17 @@
 						height: 268px;
 
 						color: white;
+
+						position: relative;
 							}
 								/*Настройки состояний*/
 									.promo-item-slider-drill {
-										background: url('../img/drill-man.jpg');
+										background: url('../img/drill-man.jpg') no-repeat top center;
 									}
 
 									.promo-item-slider-perforator {
 										display: none;
-										background: url('../img/perforator-man.jpg');
+										background: url('../img/perforator-man.jpg') no-repeat top center;
 									}
 
 							.promo-slider-heading {
@@ -560,45 +616,150 @@
 								font-weight: bold;
 								font-family: 'Cuprum', sans-serif;
 								text-transform: uppercase;
+
+								margin: 0;
+								padding-left: 23px;
+								padding-top: 21px;
 							}
 
 							.promo-slider-description {
 								font-size: 18px;
 								font-family: 'Cuprum', sans-serif;
+
+								margin: 0;
+								margin-top: 3px;
+								margin-left: 24px;
+							}
+
+							.promo-slider-opencatalog-btn {
+								position: absolute;
+
+								left: 24px;
+								bottom: 24px;
+							}
+
+							.promo-slider-back-btn {
+								position: absolute;
+
+								left: 25px;
+								top: 50%;
+
+								width: 25px;
+								height: 40px;
+
+							}
+
+							.promo-slider-forward-btn {
+								position: absolute;
+
+								right: 25px;
+								top: 50%;
+
+								width: 25px;
+								height: 40px;
+
 							}
 
 		/*---------------------Разделы "Популярное"---------------------*/
+			.popular {
+				padding-bottom: 85px;
+			}
+
 			.popular-heading-container {
 				background: #f9f5f0;
+
+				display: flex;
+				justify-content: space-between;
+
+				padding-left: 28px;
+				padding-top: 28px;
+				padding-right: 28px;
+
+				min-height: 89px;
+			}
+
+			.popular .section-heading-catalog {
+				margin-top: 3px;
+			}
+
+			.popular-catalog {
+				margin: 0;
+				margin-bottom: 20px;
 			}
 
 			.producers {
 				list-style: none;
 				padding: 0;
+				margin: 0;
+
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
 			}
 					.producer-item {
 						width: 220px;
 						height: 145px;
 
 						border: 1px solid #eaeaea;
+
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+
+						margin-top: 20px;
 					}
 						.producer-img {
-
+							display: block;
+							margin: auto;
 						}
+
+					/*Настройки состояний*/	
+
+					.producer-item:hover,
+					.producer-item:focus {
+						box-shadow: 0px 10px 25px rgba(41, 52, 73, 0.5);
+					}
 
 		/*---------------------Раздел "Сервисы"---------------------*/
 			.services {
 				background-color: #f4f8f9;
+
+				min-height: 521px;
 			}
+
+			.services-columns {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.services .container {
+				padding-top: 60px;
+
+			}
+
+			.services-description {
+				width: 400px;
+
+				margin: 0;
+				margin-top: 30px;
+				margin-bottom: 70px;
+
+				line-height: 24px;
+			}
+
 				.services-slider {
 					display: inline-block;
 
 					padding: 0;
+					margin: 0;
 					list-style: none;
 				}
 					.services-slider-item {
 						width: 240px;
 						height: 60px;
+
+						padding-left: 20px;
+						padding-top: 17px;
 
 						background-color: #32425c;
 
@@ -624,27 +785,47 @@
 								}
 
 						.service-description {
-							display: inline-block;
+							list-style: none;
+							margin: 0;
+							padding: 0;
+
+							padding-left: 80px;
 
 							width: 100%
 							height: 325px;
+
 						}
-								.service-description h3 {
+
+								.service-description-item {
+									width: 700px;
+
+									padding-bottom: 90px;
+								}
+
+								.service-description-item h3 {
 										font-size: 36px;
 										font-family: 'Cuprum', sans-serif;
 										color: #32425c;
 										text-transform: uppercase;
+
+										margin: 0;
 									}
 
-								.service-description p {
-									height: 100px;
+								.service-description-item p {
+									min-height: 100px;
+
+									line-height: 24px;
+
+									margin: 0;
+									width: 280px;
+									padding-top: 30px;
 								}
 
 									/*Настройки состояний*/
 									.service-description-delivery {
 										background-image: url(../img/car-delivery.png);
 										background-repeat: no-repeat;
-										background-position: 80% 50%;
+										background-position: 80% 0%;
 									}
  			
 		/*---------------------Разделы "О компании", "Контакты"---------------------*/
@@ -753,21 +934,33 @@
 				background-color: #f2f6f8;
 
 				padding: 30px;
+				margin-bottom: 20px;
 			}
+
 		.filter-catalog-flex {
-			display: flex;
-		}
+				display: flex;
+			}
 
 		.catalog-flex {
-			display: flex;
-			flex-direction: column;
-		}
+				display: flex;
+				flex-direction: column;
+
+				margin-left: 20px;
+				padding-bottom: 60px;
+			}
+
+
 
 		/*---ФИЛЬТРЫ---*/
-			.filters-group-heading {
+			.filters-heading {
 				display: block;
 
+				margin: 0;
+				margin-bottom: 15px;
+				padding: 12px 20px 10px 20px;
+
 				width: 100%;
+				height: 40px;
 
 				background-color: #f7f3ec;
 
@@ -779,6 +972,7 @@
 				text-transform: uppercase;
 				font-weight: bold;
 
+				padding-top: 15px;
 				margin-bottom: 15px;
 			}
 
@@ -800,6 +994,8 @@
 				border-bottom: 1px solid #e5e5e5;
 
 				padding: 0;
+				padding-bottom: 20px;
+				padding-top: 20px;
 			}
 					.filter-form fieldset:last-of-type {
 						border: 0;
@@ -814,12 +1010,17 @@
 				width: 220px;
 				height: 80px;
 
+				padding: 30px;
+
 				background-color: #f7f3ec;
+
+				margin-bottom: 10px;
 
 			}
 
 			.price-outputs {
-				text-align: center;
+				display: flex;
+				justify-content: space-between;
 			}
 
 			.price-output {
@@ -830,7 +1031,6 @@
 
 				font-size: 17px;
 
-				display: inline-block;
 				text-align: center;
 			}
 
@@ -854,13 +1054,27 @@
 
 			.sorting {
 				display: flex;
+				justify-content: space-between;
+
+				margin: 0;
+				margin-bottom: 15px;
+				padding: 0px 20px 10px 20px;
+
+				height: 40px;
+
+				background-color: #f7f3ec;
+
+				text-transform: uppercase;
 			}
 
 				.sorting-type {
+					margin: 0;
 					padding: 0;
+					padding-top: 12px;
 					list-style: none;
 
 					display: flex;
+					justify-content: space-between;
 				}
 
 				.sorting-item {
@@ -931,6 +1145,11 @@
 		/*---О ТОВАРАХ---*/
 			.about-items {
 				background-color: #f2f6f8;
+			}
+
+			.about-items .container {
+				padding-top: 60px;
+				padding-bottom: 60px;
 			}
 
 			.about-items-description {
@@ -1136,6 +1355,34 @@
 
 					.footer-top .container {
 						display: flex;
+					}
+
+					/*Логотип*/
+					.footer-logo {
+						display: block;
+						width: 220px;
+						height: 70px;
+
+						border-bottom: 5px solid #b52933;
+
+						background-color: #ee3643;
+
+						text-align: center;
+
+						padding-top: 20px;
+					}
+
+					.footer-logo:hover,
+					.footer-logo:focus {
+						background-color: #ca2c37;
+
+						border-bottom: 5px solid #9a212a;
+					}
+
+					.footer-logo:active {
+						background-color: #ba2732;
+
+						border-bottom: 5px solid #8e1e26;
 					}
 
 
