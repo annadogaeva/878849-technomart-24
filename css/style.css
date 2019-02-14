@@ -53,6 +53,7 @@
 
 				width: 100%;
 				min-height: 42px;
+				border: none;
 
 				background-color: #293449;
 
@@ -97,36 +98,82 @@
 					width: 270px;
 					height: 42px;
 
-					margin-left: 220px;
+					display: flex;
 
-					line-height: 42px; /*=высоте, центровщик*/
+					position: relative;
+
+					margin-left: 220px;
 					}
+
+				.search-icon-img {
+					position: absolute;
+					top: 10px;
+					left: 15px;
+				}
 							/*Настройки состояний*/
 								.header-search:hover {
 									background-color: #212a3a;
 								}
 
-
 						.search-form { /*форма поиска*/
-							width: 225px;
-
+							width: 270px;
+							height: 42px;
 							border: none;
 
+							padding-left: 50px;
 							background-color: transparent;
 
 							color: white;
+
+							position: relative;
 							}
+
+
 										.search-form::placeholder {
 											color: white;
 											}	
 
-								/*Настройки состояний*/
-									.search-form:focus {
-											background-color: white;
-
-											color: black;
-
+										.search-form::-ms-input-placeholder {
+											color: white;
 										}
+
+
+								/*Настройки состояний*/
+									
+										.search-form:hover ~ .search-icon-img,
+										.search-icon-img:hover {
+											fill: yellow;
+											stroke: yellow;
+										}
+
+										.search-form:focus {
+											background: white;
+											outline: none;
+											color: black;
+										}
+										.search-form:focus ~ .search-icon {
+											position: absolute;
+											top: 0;
+											left: 0;
+											background: white url('../img/icon-search-red.svg') no-repeat 49% 49%;
+										}
+
+										/*Настройки автозаполнения в ВЕБКИТ*/
+									 		.search-form:-webkit-autofill {
+									 			-webkit-box-shadow: 0 0 0px 1000px #212a3a inset;
+									 			-webkit-text-fill-color: white;
+									 		}
+
+											.search-form:-webkit-autofill:hover {
+												-webkit-box-shadow: 0 0 0px 1000px #293449 inset;
+									 			-webkit-text-fill-color: white;
+											}
+
+											.search-form:-webkit-autofill:focus {
+												  -webkit-text-fill-color: black;
+												  -webkit-box-shadow: 0 0 0px 1000px white inset;
+												  transition: background-color 5000s ease-in-out 0s;
+											}
 
 				/*КНОПКИ*/
 					.bookmarks-btn {
@@ -137,15 +184,31 @@
 							
 							line-height: 42px; /*=высоте, центровщик*/
 							text-align: center;
+
+							display: flex;
 							}
+
+						.bookmarks-icon {
+							margin: 12px 11px 10px 17px;
+						}
+
 								/*Настройки состояний*/
 									.bookmarks-btn:hover,
 									.bookmarks-btn:focus {
 										background-color: #212a3a;
+									} 
+
+									.bookmarks-btn:hover * {
+										fill: white;
 									}
+
 									.bookmarks-btn:active {
 										background-color: #161d29;
 										color: #8b8e94;
+									}
+
+									.bookmarks-btn:active * {
+										fill: rgba(255, 255, 255, 0.5);
 									}
 
 
@@ -157,6 +220,12 @@
 
 							line-height: 42px; /*=высоте, центровщик*/
 							text-align: center;
+
+							display: flex;
+							}
+
+							.shopping-cart-header-icon {
+								margin: 12px 17px 10px 17px;
 							}
 
 								/*Настройки состояний*/
@@ -165,9 +234,17 @@
 										background-color: #212a3a;
 										}
 
+									.shopping-cart-btn:hover * {
+										fill: white;
+									}
+
 									.shopping-cart-btn:active {
 										background-color: #161d29;
 										color: #8b8e94;
+									}
+
+									.shopping-cart-btn:active * {
+										fill: rgba(255, 255, 255, 0.5);
 									}
 
 									.shopping-cart-btn-fullcart {
@@ -279,7 +356,7 @@
 
 											}
 												.user-btn {
-													display: inline-block;
+													display: flex;
 
 													width: 120px; /*ширина по умолчанию*/
 													height: 45px;
@@ -291,6 +368,11 @@
 													line-height: 45px; /*=высоте, центровщик*/
 													text-align: center;
 													}
+
+													.login-icon {
+														margin: 13px 12px 10px 13px;
+													}
+
 															/*Настройки состояний*/
 																.user-btn:hover,
 																.user-btn:focus {
@@ -304,9 +386,11 @@
 															/*Настройки ширины*/				
 																.user-login-btn {
 																	width: 120px;
+
 																}
 																.user-register-btn {
 																		width: 150px;
+																		justify-content: center;
 																}
 
 					.user-info {
@@ -371,9 +455,9 @@
 					.site-nav ul {
 						display: flex;
 						justify-content: space-around;
-						align-items: center;
+						align-items: stretch;
 
-						min-height: 64px;
+						min-height: 60px;
 
 						margin: 0;
 						list-style: none;
@@ -383,7 +467,8 @@
 						border-bottom: 5px solid #293449;
 					}	
 					 		.site-nav-item {
-					 			padding: 20px 30px;
+
+					 		padding: 19px 30px 17px 30px;
 
 					 			}
 					 				/*Настройки состояний*/
@@ -513,6 +598,8 @@
 						height: 125px;
 
 						position: relative;
+						display: flex;
+						flex-direction: column;
 
 						background-repeat: no-repeat;
 
@@ -532,15 +619,16 @@
 					}
 
 					.promo-btn {
-						display: block;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
 						width: 135px;
-						height: 38px; 
+						min-height: 38px; 
 						
 						background-color: rgba(0, 0, 0, 0.1);
 						border-radius: 3px; 
 
 						font-size: 14px;
-						line-height: 38px; /*=высоте, центровщик*/
 						text-align: center;
 						font-family: 'Cuprum', sans-serif;
 						text-transform: uppercase;
@@ -1201,6 +1289,7 @@
 
 							.new-price {
 								display: block;
+								position: relative;
 
 								width: 122px;
 								height: 38px;
@@ -1213,6 +1302,22 @@
 								font-weight: bold;
 								color: white;
 								line-height: 38px; /*вертикальный центровщик*/
+							}
+
+							.new-price::after {
+								content: "";
+								display: block;
+
+								background-color: #ee3643;
+
+								width: 27px;
+								height: 27px;
+
+								position: absolute;
+								top: 6px;
+								left:109px;
+
+								transform: rotate(45deg);
 							}
 
 				/*Настройки состояний*/
