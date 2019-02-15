@@ -105,40 +105,51 @@
 					margin-left: 220px;
 					}
 
+				/*Кнопка отправки формы*/
+				.search-btn {
+					position: absolute;
+					width: 17px;
+					height: 17px;
+					top: 12px;
+					left: 17px;
+					background-color: transparent;
+					border: none;
+					z-index: 10;
+				}
+
+				/*SVG - лупа*/
 				.search-icon-img {
 					position: absolute;
-					top: 10px;
-					left: 15px;
+					top: 12px;
+					left: 17px;
+					z-index: 5;
 				}
-							/*Настройки состояний*/
-								.header-search:hover {
-									background-color: #212a3a;
-								}
 
-						.search-form { /*форма поиска*/
-							width: 270px;
-							height: 42px;
-							border: none;
+				.search-form { /*форма поиска*/
+					width: 270px;
+					height: 42px;
+					border: none;
 
-							padding-left: 50px;
-							background-color: transparent;
+					padding-left: 50px;
+					background-color: transparent;
 
-							color: white;
+					color: white;
 
-							position: relative;
+					position: relative;
 							}
 
-
-										.search-form::placeholder {
-											color: white;
+								.search-form::placeholder {
+									color: white;
 											}	
 
-										.search-form::-ms-input-placeholder {
-											color: white;
+								.search-form::-ms-input-placeholder {
+									color: white;
 										}
 
-
-								/*Настройки состояний*/
+								/*Настройки состояний поля поиска*/
+										.header-search:hover {
+											background-color: #212a3a;
+											}
 									
 										.search-form:hover ~ .search-icon-img *,
 										.search-icon-img:hover *{
@@ -373,6 +384,10 @@
 																.user-btn:hover,
 																.user-btn:focus {
 																	color: #ee3643;
+																}
+
+																.user-btn:hover ~ .login-icon * {
+																	fill: #32425c;
 																}
 
 																.user-btn:active {
@@ -1353,10 +1368,12 @@
 						.catalog-item:focus .catalog-item-hover {
 							margin-top: 1px;
 
-							display: block;
+							display: flex;
+							flex-direction: column;
 
 							width: 218px;
 							height: 172px;
+							padding: 45px 45px 45px;
 
 							text-align: center;
 						}
@@ -1369,7 +1386,7 @@
 								height: 38px;
 								border-bottom: 3px solid #367315;
 								border-radius: 3px; 
-								margin: 0 auto;
+								margin-bottom: 8px;
 								
 								background-color: #63a63e;
 
