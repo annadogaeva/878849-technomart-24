@@ -140,10 +140,9 @@
 
 								/*Настройки состояний*/
 									
-										.search-form:hover ~ .search-icon-img,
-										.search-icon-img:hover {
-											fill: yellow;
-											stroke: yellow;
+										.search-form:hover ~ .search-icon-img *,
+										.search-icon-img:hover *{
+											fill: white;
 										}
 
 										.search-form:focus {
@@ -151,11 +150,8 @@
 											outline: none;
 											color: black;
 										}
-										.search-form:focus ~ .search-icon {
-											position: absolute;
-											top: 0;
-											left: 0;
-											background: white url('../img/icon-search-red.svg') no-repeat 49% 49%;
+										.search-form:focus ~ .search-icon-img * {
+											fill: #ee3643;
 										}
 
 										/*Настройки автозаполнения в ВЕБКИТ*/
