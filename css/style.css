@@ -10,6 +10,7 @@
 
 	body {
 		margin: 0;
+		font-family: 'PT Sans', 'Myriad Pro', sans-serif;
 	}
 
 	a {
@@ -289,7 +290,7 @@
 		/*--ОСНОВНАЯ ЧАСТЬ ШАПКИ--*/	
 			.header-main {
 				display: flex;
-				justify-content: space-between;
+				justify-content: flex-start;
 
 				padding-top: 46px;
 				padding-bottom: 40px;
@@ -299,7 +300,7 @@
 			}
 
 					.page-title {
-						width: 205px;
+						min-width: 200px;
 						margin: 0;
 						margin-bottom: auto;
 
@@ -313,6 +314,7 @@
 
 					.header-contacts {
 						margin-bottom: auto;
+						margin-left: 69px;
 
 						}
 
@@ -349,7 +351,7 @@
 
 					.user-nav {
 						margin-bottom: auto;
-
+						margin-left: 60px;
 						}
 							.user-nav ul {
 								padding: 0;
@@ -418,7 +420,7 @@
 						display: flex;
 						flex-direction: column;
 						margin: 0;
-
+						margin-left: 40px;
 						}
 							.user-card {
 								display: flex;
@@ -437,6 +439,7 @@
 								 		display: flex;
 								 		flex-direction: column;
 								 		justify-content: center;
+								 		
 								 	}
 								 		/*Настройки состояний*/
 									 		.username:active {
@@ -446,11 +449,11 @@
 
 
 									 .user-icon-img {
-									 	margin: 12px 8px 15px 15px;
+									 	margin: 12px 0px 15px 5px;
 									 }
 
 									 .log-out-img {
-									 	margin: 12px 15px 15px 15px;
+									 	margin: 14px 0px 15px 0px;
 									 }
 
 									 	/*Настройки состояний*/
@@ -1135,7 +1138,7 @@
 
 				margin: 0;
 				padding: 0;
-				min-height: 60px;
+				min-height: 57px;
 
 				display: flex;
 				align-items: center;
@@ -1190,14 +1193,15 @@
 
 		.filter-catalog-flex {
 				display: flex;
+				padding-bottom: 
 			}
 
 		.catalog-flex {
 				display: flex;
 				flex-direction: column;
 
-				margin-left: 20px;
-				padding-bottom: 60px;
+				margin-left: 17px;
+				padding-bottom: 48px;
 			}
 
 
@@ -1207,7 +1211,6 @@
 				display: block;
 
 				margin: 0;
-				margin-bottom: 15px;
 				padding: 12px 20px 10px 20px;
 
 				width: 100%;
@@ -1222,9 +1225,9 @@
 				font-size: 17px;
 				text-transform: uppercase;
 				font-weight: bold;
+				padding-top: 20px;
+				padding-bottom: 20px; 
 
-				padding-top: 15px;
-				margin-bottom: 15px;
 			}
 
 			.filter-list {
@@ -1243,14 +1246,22 @@
 				border-left: 0;
 				border-right: 0;
 				border-bottom: 1px solid #e5e5e5;
-
-				padding: 0;
-				padding-bottom: 20px;
-				padding-top: 20px;
 			}
 					.filter-form fieldset:last-of-type {
 						border: 0;
 					}
+
+			.filter-price-range {
+				padding: 0 0 18px 0;
+			}
+
+			.filter-producers {
+				padding: 0 0 0 0;
+			}
+
+			.filter-power {
+				padding: 0 0 0 0;
+			}
 
 			.filter-form label {
 				text-transform: uppercase;
@@ -1261,11 +1272,11 @@
 				width: 220px;
 				height: 80px;
 
-				padding: 30px;
+				padding: 38px 30px 30px 20px;
 
 				background-color: #f7f3ec;
 
-				margin-bottom: 10px;
+				margin-bottom: 11px;
 				position: relative;
 
 			}
@@ -1277,7 +1288,7 @@
 
 			.price-input {
 				width: 95px;
-				height: 40px;
+				height: 38px;
 
 				background-color: #f7f3ec;
 
@@ -1289,6 +1300,7 @@
 
 			.scale {
 				height: 2px;
+				width: 180px;
 				position: relative;
   				background: #d7dcde;
 			}
@@ -1321,8 +1333,16 @@
 			}
 
 			.range-toggle-max {
-			  left: 80%;
+			  left: 78%;
 			}
+
+				.checkbox-label {
+					display: flex;
+				}
+
+				.radiobutton-label {
+					display: flex;
+				}
 
 				.filter-checkbox, .filter-radio{
 					display: none;
@@ -1330,7 +1350,7 @@
 
 				.filter-checkbox + label:before {
 			    content: "";
-			    width: 28px;
+			    width: 35px;
 			    height: 25px;
 			    background-image: url('../img/checkbox-off.svg');
 			    background-repeat: no-repeat;
@@ -1365,7 +1385,7 @@
 
 				.filter-radio + label:before {
 			    content: "";
-			    width: 28px;
+			    width: 35px;
 			    height: 25px;
 			    background-image: url('../img/radio-off.svg');
 			    background-repeat: no-repeat;
@@ -1412,6 +1432,8 @@
 				line-height: 38px; /*=высоте, центровщик*/
 				text-align: center;
 				text-transform: uppercase;
+
+				margin-top: 64px; 
 			}
 
 		/*---СОРТИРОВКА---*/
@@ -1491,7 +1513,7 @@
 			.pagination {
 				list-style: none;
 				padding: 0;
-				margin-top: 50px;
+				margin-top: 54px;
 
 				width: 290px;
 
@@ -1540,15 +1562,17 @@
 		/*---О ТОВАРАХ---*/
 			.about-items {
 				background-color: #f2f6f8;
+				min-height: 262px;
 			}
 
 			.about-items .container {
-				padding-top: 60px;
-				padding-bottom: 60px;
+				padding-top: 66px;
+				padding-bottom: 29px;
 			}
 
 			.about-items-description {
 				line-height: 24px;
+				padding-top: 38px;
 			}
 
 	/*---КАРТОЧКИ ТОВАРОВ---*/
@@ -1556,6 +1580,7 @@
 		.catalog {
 			list-style: none;
 			padding: 0;
+			margin: 0;
 
 			display: flex;
 			flex-wrap: wrap;
@@ -1566,13 +1591,11 @@
 
 		.catalog-main-page {
 			width: 940px;
+			padding-bottom: 19px;
 		}
 				.catalog-item {
-
 					display: flex;
 					flex-direction: column;
-
-
 
 					width: 220px;
 					height: 318px;
@@ -1584,12 +1607,12 @@
 					position: relative;
 					z-index: 50;
 
-					margin-top: 20px;
+					margin-top: 18px;
 					padding-top: 1px;
 					}
 
 							.catalog-item-title {
-								margin: 10px auto 10px auto;
+								margin: 8px auto 10px auto;
 
 								font-size: 18px;
 								font-weight: bold;
@@ -1617,7 +1640,7 @@
 
 								border-radius: 3px;
 
-								margin: 0 auto;
+								margin: 0 43px;
 
 								background-color: #ee3643;
 
@@ -1686,15 +1709,15 @@
 
 							width: 218px;
 							height: 172px;
-							padding: 45px 45px 45px;
+							padding: 40px 45px 45px 40px;
 
 							text-align: center;
 						}
 
 						/*КНОПКИ ПРИ НАВЕДЕНИИ НА КАРТОЧКУ*/
 								.item-buy-btn { 			/*кнопка "Купить"*/
-								display: block;
-								box-sizing: border-box;
+								display: flex;
+								
 								width: 135px;
 								height: 38px;
 								border-bottom: 3px solid #367315;
@@ -1706,9 +1729,15 @@
 								color: white;
 								font-size: 14px; 
 								line-height: 38px; /*=высоте, центровщик*/
-								text-align: center;
 								font-family: 'Cuprum', sans-serif;
 								text-transform: uppercase;
+								}
+
+								.catalog-item-hover-buy-icon {
+									margin-top: auto;
+									margin-bottom: auto;
+									margin-left: 14px;
+									margin-right: 20px;
 								}
 										/*Настройки состояний*/
 											.item-buy-btn:hover,
@@ -1756,15 +1785,162 @@
 
 		.map-popup {
 			display: none;
+			position: fixed;
+			margin: auto;
+				left: 0;
+				right: 0;
+			bottom: 200px;
+			width: 940px;
+			height: 450px;
+			background-color: white;
+			z-index: 100;
+			box-shadow: 0 0 16px 0 rgba(47, 42, 43, 0.5);
 		}
 
-		.write-us-popup {
-			display: none;
-		}
 
-		.cart-add-popup {
-			display: none;
-		}
+		/*ПОПАП ФОРМА НАПИШИТЕ НАМ*/
+			.write-us-popup {
+				display: none;
+				flex-direction: column;
+				position: fixed;
+				margin: auto;
+				left: 0;
+				right: 0;
+				bottom: 200px;
+				z-index: 100;
+				width: 620px;
+				min-height: 430px;
+				border-top: 8px solid #ff5357;
+				background-color: white;
+				box-shadow: 0 20px 40px 0px rgba(0, 0, 0, 0.75);
+			}
+
+				.write-us-popup-input-area {
+					display: flex;
+				}
+
+				.write-us-form-fields {
+					display: flex;
+					flex-direction: column;
+					padding-top: 47px;
+					padding-left: 80px;
+					padding-right: 80px;
+					padding-bottom: 15px;
+				}
+
+				.write-us-input-column {
+					display: flex;
+					flex-direction: column;
+					margin-right: 22px;
+					margin-bottom: 20px;
+				}
+
+					.close-popup {
+						background: url('../img/form-close.svg') no-repeat top center;
+						width: 25px;
+						height: 25px;
+						position: absolute;
+						border: none;
+						top: 10px;
+						right: 5px;
+					}
+
+					.write-us-popup label {
+						font-family: 'Cuprum', sans-serif;
+						font-size: 18px;
+						margin-bottom: 8px;
+					}
+
+					.write-us-popup input[type="text"],
+					.write-us-popup input[type="email"] {
+						width: 219px;
+						height: 37px;
+						padding-left: 15px;
+						border: 2px solid #dee3e4;
+						border-radius: 3px;
+					}
+
+					.write-us-popup textarea {
+						width: 460px;
+						min-height: 115px;
+						padding-left: 15px;
+						padding-top: 10px;
+						border: 2px solid #dee3e4;
+						border-radius: 3px;
+						resize: none;
+					}
+
+					.write-us-popup-button-area {
+						width: 620px;
+						min-height: 112px;
+						background-color: #f4f4f4;
+						padding-top: 38px;
+
+					}
+
+					.write-us-popup-submit {
+						border: none;
+						width: 460px;
+						margin-left: auto;
+						margin-right: auto;
+
+					}
+
+		/*ПОПАП - ТОВАР ДОБАВЛЕН В КОРЗИНУ*/
+				.cart-add-popup {
+					display: none;
+					position: fixed;
+					margin: auto;
+						left: 0;
+						right: 0;
+						top: 40%;
+					width: 620px;
+					height: 285px;
+					background-color: white;
+					z-index: 100;
+					border-top: 8px solid #ee3643;
+					box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
+					font-family: 'Cuprum', sans-serif;
+				}
+
+				.cart-add-popup-item-added {
+					background: white url('../img/cartaccept.svg') no-repeat 15% 50%;
+					display: block;
+					min-height: 162px;
+					font-size: 30px;
+					padding-left: 180px;
+					padding-top: 62px;
+					margin: 0;
+				}
+
+				.popup-buttons {
+					display: flex;
+					list-style: none;
+					margin: 0;
+					padding: 0;
+					background-color: #f1f1f1;
+					min-height: 112px;
+					padding-left: 80px;
+					padding-right: 80px;
+					padding-top: 38px;
+				}
+
+				.popup-buttons li {
+					margin-right: 20px;
+				}
+
+				.continue-shopping-btn {
+					display: block;
+					width: 220px;
+					text-align: center;
+					height: 38px;
+					line-height: 38px;
+					text-transform: uppercase;
+					background-color: white;
+					border-radius: 3px;
+				}
+
+
 
 /*---------------------ПОДВАЛ---------------------*/
 	/*--ОСНОВНЫЕ СТИЛИ ПОДВАЛА--*/
@@ -1842,6 +2018,7 @@
 
 									margin: 0;
 									padding: 0;
+									margin-right: -10px;
 
 									list-style: none;
 									}
@@ -1857,6 +2034,7 @@
 
 									margin: 0;
 									padding: 0;
+									margin-right: -10px;
 
 									list-style: none;
 
@@ -1939,7 +2117,8 @@
 										display: flex;	
 
 										padding: 0;
-										margin-left: 140px;
+										margin-left: 120px;
+										margin-top: 12px;
 										list-style: none;
 									}
 
@@ -1977,12 +2156,18 @@
 														.social-btn-inst {
 															background: url(../img/insta-icon.svg) no-repeat 50% center;
 														}
+					.footer-copyright {
+						margin-top: 12px;
+					}
+
 
 					.footer-feedback {
 						width: 150px;
-						margin-left: 120px;
+						margin-left: 84px;
+						margin-top: 12px;
 					}
 
 					.footer-dev-link {
 						width: 110px;
+						margin-top: 12px;
 					}

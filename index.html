@@ -313,19 +313,39 @@
   		<section class="write-us-popup">
   			<h2 class="visually-hidden">Напишите нам</h2>
   			<form method="post" action="#" autocomplete="on" name="write-us-form">
-  				<label for="fullname">Ваше имя:<input type="text" id="fullname" placeholder="Имя Фамилия"></label>
-  				<label for="useremail">Ваш e-mail:<input type="email" id="useremail" placeholder="email@example.com"></label>
-  				<label for="userletter">Текст письма:<textarea id="userletter" placeholder="В свободной форме" rows="7" cols="50"></textarea></label>
-  				<input type="submit" name="write-us-sumbit" value="Отправить">
+        <div class="write-us-form-fields">
+          <div class="write-us-popup-input-area">
+                <div class="write-us-input-column">
+      				<label for="fullname">Ваше имя:</label><input type="text" id="fullname" placeholder="Имя Фамилия">
+                </div>
+                <div class="write-us-input-column">
+      				<label for="useremail">Ваш e-mail:</label><input type="email" id="useremail" placeholder="email@example.com"></label>
+                </div>
+          </div>
+          <div class="write-us-input-column">
+  				  <label for="userletter">Текст письма:</label><textarea id="userletter" placeholder="В свободной форме" rows="7" cols="50"></textarea>
+          </div>
+        </div>
+  				<div class="write-us-popup-button-area">
+            <input type="submit" name="write-us-sumbit" value="Отправить" class="to-all-btn write-us-popup-submit">
+          </div>
   				<button class="close-popup" aria-label="Закрыть форму" type="button"></button>
   			</form>
   		</section>
+      <section class="cart-add-popup">
+          <h2 class="cart-add-popup-item-added">Товар добавлен в корзину!</h2>
+          <ul class="popup-buttons">
+            <li><a href="#" class="to-all-btn to-all-btn-3">Оформить заказ</a></li>
+            <li><a href="#" class="continue-shopping-btn">Продолжить покупки</a></li>
+          </ul>
+          <button class="close-popup" aria-label="Закрыть окно" type="button"></button>
+      </section>
   	</main>
   	<footer class="page-footer">
   		<div class="footer-top"> <!--Верх футера-->
           <div class="container">
             <div class="footer-companyinfo">
-        			<a class="footer-logo"><img src="img/logo-technomart.svg" alt="Техномарт" width="145" height="30"></a>
+        			<a class="footer-logo"><img src="img/logo-technomart.svg" alt="Техномарт" width="140" height="25"></a>
         			<p class="footer-contacts">
         				<p class="footer-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         				<p class="footer-contacts-phone-number"><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
