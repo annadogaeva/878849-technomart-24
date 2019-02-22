@@ -543,10 +543,11 @@
 						padding-left: 21px;
 						padding-right: 21px;
 						border-bottom: 5px solid #293449;
+						overflow: hidden;
 					}	
 					 		.site-nav-item {
 
-					 		padding: 19px 30px 17px 30px;
+					 		padding: 19px 30px 17px 4%;
 
 					 			}
 					 				/*Настройки состояний*/
@@ -892,9 +893,9 @@
 				justify-content: space-between;
 
 				padding-left: 28px;
-				padding-top: 28px;
+				padding-top: 26px;
 				padding-right: 28px;
-				padding-bottom: 28px;
+				padding-bottom: 25px;
 
 				min-height: 89px;
 			}
@@ -955,6 +956,7 @@
 			.services-columns {
 				display: flex;
 				justify-content: space-between;
+				align-items: flex-start;
 			}
 
 			.services .container {
@@ -978,8 +980,9 @@
 					list-style: none;
 					align-self: flex-start;
 					position: relative;
-					margin-bottom: auto;
+					margin-bottom: 0;
 					z-index: 1;
+					min-height: 189px;
 
 				}
 
@@ -1031,15 +1034,15 @@
 							padding: 0;
 
 							padding-left: 80px;					
-							min-height: 325px;
+							min-height: 287px;
+							align-self: flex-start;
 
 						}
 
 								.service-description-item {
 									width: 700px;
-									min-height: 325px;
-									padding-bottom: 90px;
-
+									align-self: flex-start;
+									min-height: 287px;
 								}
 
 								.service-description-item h3 {
@@ -1142,6 +1145,7 @@
 				width: 185px;
 
 				margin-top: 25px;
+				margin-bottom: 30px;
 
 				line-height: 24px;
 			}
@@ -1615,7 +1619,7 @@
 
 		.catalog-main-page {
 			width: 940px;
-			padding-bottom: 19px;
+			padding-bottom: 22px;
 		}
 				.catalog-item {
 					display: flex;
