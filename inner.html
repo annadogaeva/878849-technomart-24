@@ -16,7 +16,7 @@
 	  			<a class="header-logo" href="index.html"><img src="img/logo-technomart.svg" alt="Техномарт" width="110" height="20"></a>
 	  			<form class="header-search" method="get">
       			<button class="search-btn" type="submit">Искать</button>
-	              <input type="text" id="searchform" class="search-form" placeholder="Поиск:" required>      
+	              <input type="search" id="searchform" class="search-form" placeholder="Поиск:" required>      
                       <svg class="search-icon-img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px"
   		                   height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
   		                <g >
@@ -62,15 +62,14 @@
 	  			<section class="user-info"> <!--Информация о пользователе-->
 		          <h2 class="visually-hidden">Информация о пользователе</h2>
 		          <div class="user-card">
-			          <a href="profile.html" class="user-icon">
+			          <a href="profile.html" class="userprofile">
 			          	<svg class="user-icon-img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 							 width="20px" height="18px" viewBox="0 0 20 18" enable-background="new 0 0 20 18" xml:space="preserve">
 						<path  d="M17.881,14.166c-2.144-0.735-4.256-1.666-5.207-2.39c-0.657-0.501-0.77-1.618-0.517-2.415
 							c1.118-0.903,1.864-2.477,1.864-4.278C14.021,2.276,12.221,0,10,0S5.979,2.276,5.979,5.083c0,1.801,0.746,3.374,1.863,4.277
 							c0.253,0.798,0.141,1.915-0.517,2.416c-0.95,0.724-3.063,1.654-5.207,2.39S0,18,0,18h20C20,18,20.025,14.901,17.881,14.166z"/>
 						</svg>
-						</a>
-			          <a href="profile.html" class="username">Равшан Джамшутович</a>
+			          Равшан Джамшутович</a>
 			          <a href="log-out.html" class="log-out">
 						       <svg class="log-out-img" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 									 width="21px" height="17px" viewBox="0 0 21 17" enable-background="new 0 0 21 17" xml:space="preserve">
@@ -90,13 +89,13 @@
   		</div>
   		<nav class="site-nav container"> <!--Меню навигации-->
 		  		<ul>
-		  			<li class="site-nav-item"><a href="index.html">Главная</a></li>
-		  			<li class="site-nav-item"><a href="#">Компания</a></li>
-		  			<li class="site-nav-item"><a href="#">Каталог</a></li>
-		  			<li class="site-nav-item"><a href="#">Новости</a></li>
-		  			<li class="site-nav-item"><a href="#">Спецпредложения</a></li>
-		  			<li class="site-nav-item"><a href="#">Доставка</a></li>
-		  			<li class="site-nav-item"><a href="#">Контакты</a></li>
+		  			<li><a href="index.html" class="site-nav-item">Главная</a></li>
+		  			<li><a href="#" class="site-nav-item">Компания</a></li>
+		  			<li><a href="#" class="site-nav-item">Каталог</a></li>
+		  			<li><a href="#" class="site-nav-item">Новости</a></li>
+		  			<li><a href="#" class="site-nav-item">Спецпредложения</a></li>
+		  			<li><a href="#" class="site-nav-item">Доставка</a></li>
+		  			<li><a href="#" class="site-nav-item">Контакты</a></li>
 		  		</ul>
   		</nav>
   	</header>
@@ -112,7 +111,7 @@
 	      <div class="filter-catalog-flex">
 			      <!--Фильтр-->
 				    <section class="filters">
-				      	<form class="filter-form" name="filter" method="get" autocomplete="on">
+				      	<form class="filter-form" name="filter" method="get">
 				          <h3 class="filters-heading">Фильтр:</h3>
 					        <fieldset class="filter-price-range">
 					          <legend class="filter-section-heading">Цена:</legend>

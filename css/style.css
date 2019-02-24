@@ -327,6 +327,7 @@
 						margin-bottom: auto;
 
 						padding-top: 3px;
+						margin-right: 69px;
 
 						color: #ee3643;
 						font-style: italic;
@@ -336,7 +337,7 @@
 
 					.header-contacts {
 						margin-bottom: auto;
-						margin-left: 69px;
+						
 						display: flex;
 						flex-direction: column;
 						}
@@ -395,7 +396,6 @@
 													align-items: center;
 
 													width: 120px; /*ширина по умолчанию*/
-													height: 45px; /*фикс для ie*/
 													min-height: 45px;
 
 													background-color: white;
@@ -457,17 +457,21 @@
 								padding-bottom: 10px;
 							}					
 
-								 	.username {
+								 	.userprofile {
 								 		font-size: 21px;
 								 		margin-left: -20px;
 								 	}
 								 		/*Настройки состояний*/
-									 		.username:active {
+									 		.userprofile:active {
 									 			color: rgba(0, 0, 0, 0.3);
 									 		}
 
+									 .userprofile:hover .user-icon-img {
+									 	fill: #32425c;
+									 }
+
 									 .user-icon-img {
-									 	margin: 12px 0px 0px 0px;
+									 	margin: 12px 10px 0px 13px;
 									 	fill: #c5c5c5;
 									 }
 
@@ -545,9 +549,13 @@
 						border-bottom: 5px solid #293449;
 						overflow: hidden;
 					}	
-					 		.site-nav-item {
 
-					 		padding: 19px 30px 17px 4%;
+					.site-nav li {
+						display: flex;
+					}
+					 		.site-nav-item {
+					 		padding: 19px 17px 17px 19px;
+					 		display: block;
 
 					 			}
 					 				/*Настройки состояний*/
@@ -596,9 +604,11 @@
 				justify-content: center;
 				align-items: center;
 
+				padding: 10px;
+
 				width: 220px; /*ширина по умолчанию*/
 				min-height: 38px; 
-				height: 38px; /*фикс верт.выравнивание в ie*/
+				
 				border-radius: 3px; 
 
 				background-color: #ee3643;
@@ -607,6 +617,7 @@
 				font-size: 14px;
 				font-family: 'Cuprum', 'Arial', 'Helvetica', sans-serif; 
 				text-transform: uppercase; 
+				text-align: center;
 				}
 						/*Настройки состояний*/
 								.to-all-btn:hover,
@@ -891,6 +902,7 @@
 
 				display: flex;
 				justify-content: space-between;
+				align-items: center;
 
 				padding-left: 28px;
 				padding-top: 26px;
@@ -901,7 +913,7 @@
 			}
 
 			.popular .section-heading-catalog {
-				margin-top: 3px;
+				
 			}
 
 			.popular-catalog {
@@ -1003,6 +1015,7 @@
 
 						padding-left: 20px;
 						padding-top: 17px;
+						padding-right: 20px;
 
 						background-color: #32425c;
 
@@ -1012,7 +1025,9 @@
 						color: white;
 						font-size: 21px;
 						font-weight: bold;
-						font-family: 'Cuprum', 'Arial', 'Helvetica', sans-serif; 
+						font-family: 'Cuprum', 'Arial', 'Helvetica', sans-serif;
+						overflow: hidden;
+						text-overflow: ellipsis; 
 					}
 							/*Настройки состояний*/
 								.services-slider-item-active {
@@ -1168,7 +1183,6 @@
 
 				margin: 0;
 				padding: 0;
-				height: 30px; /*фикс для ие*/
 				min-height: 57px;
 
 				display: flex;
@@ -1637,6 +1651,7 @@
 
 					margin-top: 18px;
 					padding-top: 1px;
+					padding-bottom: 20px;
 					}
 
 							.catalog-item-title {
@@ -1660,23 +1675,29 @@
 								}
 
 							.new-price {
-								display: flex;
-								justify-content: center;
-								align-items: center;
+								display: block;
 								position: relative;
 
 								width: 142px;
-								min-height: 38px;
+								height: 38px;
 
 								border-radius: 3px;
 
 								margin: 0 43px;
+								padding-bottom: 9px;
+								padding-top: 10px;
+								padding-right: 40px;
+								padding-left: 10px;
 
 								background-color: #ee3643;
 
+								text-align: center;
 								font-size: 17px;
 								font-weight: bold;
 								color: white;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								white-space: nowrap;
 							}
 
 							.new-price::after {
@@ -1684,7 +1705,8 @@
   
 									  position: absolute;
 									  top: 0;
-									  right: -20px;
+									  right: 0px;
+									  bottom: 0;
 									  
 									  width: 0;
 									  min-height: 38px;
