@@ -92,3 +92,27 @@ for (var i = 0; i < promoSlideBtns.length; i++) {
 	});
 };
 
+
+
+    var links = document.querySelectorAll(".card-hover-btn");
+
+for (var i = 0; i < links.length; i++) {
+	links[i].parentNode.parentNode.addEventListener("focus", function() {
+		this.classList.add("focus");
+	});
+	links[i].addEventListener("blur", function() {
+		this.parentNode.parentNode.classList.remove("focus");
+	});
+}
+
+/*
+    card.addEventListener("focus", function() 
+    {
+        card.classList.add("focus");
+    }
+        );
+ 
+    link.addEventListener("blur", function() {
+      card.classList.remove("focus");   });   
+
+*/
