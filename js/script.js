@@ -1,3 +1,21 @@
+/*Попап Добавлено в корзину Открыть*/
+buyBtns = document.querySelectorAll(".item-buy-btn");
+for (var i = 0; i < buyBtns.length; i++) {
+	buyBtns[i].addEventListener("click", function() {
+		event.preventDefault();
+		document.querySelector(".cart-add-popup").classList.remove("visually-hidden");
+		document.querySelector(".cart-add-popup").classList.add("show");
+	});
+};
+
+/*Все попапы - Закрыть*/
+closeBtns = document.querySelectorAll(".close-popup");
+ for (var i = 0; i < closeBtns.length; i++) {
+ 	closeBtns[i].addEventListener("click", function() {
+ 			this.parentNode.classList.add("visually-hidden");
+ 			this.parentNode.classList.remove("show");
+ 	});
+ }
 
 /*Попап с картой Открыть*/
 document.querySelector(".map-thumbnail").addEventListener("click", function() {
@@ -13,23 +31,6 @@ document.querySelector(".contact-info-write-us-btn").addEventListener("click", f
 	document.querySelector(".write-us-popup").classList.add("show");
 });
 
-/*Попап Добавлено в корзину Открыть*/
-buyBtns = document.querySelectorAll(".item-buy-btn");
-for (var i = 0; i < buyBtns.length; i++) {
-	buyBtns[i].addEventListener("click", function() {
-		document.querySelector(".cart-add-popup").classList.remove("visually-hidden");
-		document.querySelector(".cart-add-popup").classList.add("show");
-	});
-};
-
-/*Все попапы - Закрыть*/
-closeBtns = document.querySelectorAll(".close-popup");
- for (var i = 0; i < closeBtns.length; i++) {
- 	closeBtns[i].addEventListener("click", function() {
- 			this.parentNode.classList.add("visually-hidden");
- 			this.parentNode.classList.remove("show");
- 	});
- }
 
 /*СЛАЙДЕР - СЕРВИСЫ*/
 var slideBtns = document.querySelectorAll(".services-slider-item");
