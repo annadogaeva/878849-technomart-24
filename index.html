@@ -113,8 +113,8 @@
               <li class="promo-item-slider promo-item-slider-drill">
                     <h3 class="promo-slider-heading">Дрели</h3>
                     <p class="promo-slider-description">Соседям на радость!</p>
-                  <button type="button" class="promo-slider-back-btn" aria-label="Слайд назад"></button>
-                  <button type="button" class="promo-slider-forward-btn" aria-label="Слайд вперед"></button>
+                  <button type="button" class="promo-slider-btn promo-slider-back-btn" aria-label="Слайд назад"></button>
+                  <button type="button" class="promo-slider-btn promo-slider-forward-btn" aria-label="Слайд вперед"></button>
                   <a href="inner.html" class="btn to-all-btn to-all-btn-4 promo-slider-opencatalog-btn">Открыть каталог</a>
                   <ul class="promo-slider-controls">
                   <li class="promo-slider-control"></li>
@@ -124,8 +124,8 @@
               <li class="promo-item-slider promo-item-slider-perforator">
                 <h3 class="promo-slider-heading">Перфораторы</h3>
                 <p class="promo-slider-description">Настоящие мужские игрушки</p>
-                <button type="button" class="promo-slider-back-btn" aria-label="Слайд назад"></button>
-              <button type="button" class="promo-slider-forward-btn" aria-label="Слайд вперед"></button>
+                <button type="button" class="promo-slider-btn promo-slider-back-btn" aria-label="Слайд назад"></button>
+              <button type="button" class="promo-slider-btn promo-slider-forward-btn" aria-label="Слайд вперед"></button>
               <a href="inner.html" class="btn to-all-btn to-all-btn-4 promo-slider-opencatalog-btn">Открыть каталог</a>
               <ul class="promo-slider-controls">
               <li class="promo-slider-control promo-slider-control-active"></li>
@@ -302,20 +302,20 @@
 	  		</section>
 	  		<section class="contact-info">
 	  				<h2 class="section-heading">Контакты</h2>
-	  				<p class="pickup-in-office">Вы можете забрать товар сами, заехав в наш офис:</p>
-	  				<a href="#"><img src="img/map.png" alt="Адрес офиса: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="300" height="158"></a>
+	  				<p class="pickup-in-office hellojs">Вы можете забрать товар сами, заехав в наш офис:</p>
+	  				<a href="#"><img src="img/map.png"  class="map-thumbnail" alt="Адрес офиса: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="300" height="158" ></a>
 	  				<a href="#" class="to-all-btn to-all-btn-1 contact-info-write-us-btn" >Заблудились? Напишите нам!</a>
 	  		</section>
   		</div>
   		<!--ПОПАП с картой-->
       <div class="popup-overlay"></div>
-  		<section class="map-popup">
+  		<section class="visually-hidden map-popup">
   			<h2 class="visually-hidden">Карта проезда</h2>
-  			<img class="map-thumbnail" src="img/mappopup.png" alt="Адрес офиса: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+  			<img src="img/mappopup.png" alt="Адрес офиса: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
   			 <button class="close-popup" aria-label="Закрыть карту" type="button"></button>
   		</section>
   		<!--ПОПАП с формой-->
-  		<section class="write-us-popup">
+  		<section class="visually-hidden write-us-popup">
   			<h2 class="visually-hidden">Напишите нам</h2>
   			<form method="post" action="#" autocomplete="on" name="write-us-form">
         <div class="write-us-form-fields">
@@ -334,11 +334,11 @@
   				<div class="write-us-popup-button-area">
             <input type="submit" name="write-us-sumbit" value="Отправить" class="to-all-btn write-us-popup-submit">
           </div>
-  				<button class="close-popup" aria-label="Закрыть форму" type="button"></button>
   			</form>
+        <button class="close-popup" aria-label="Закрыть форму" type="button"></button>
   		</section>
       <!--ПОПАП Товар добавлен-->
-      <section class="cart-add-popup">
+      <section class="visually-hidden cart-add-popup">
           <h2 class="cart-add-popup-item-added">Товар добавлен в корзину!</h2>
           <ul class="popup-buttons">
             <li><a href="#" class="to-all-btn to-all-btn-3">Оформить заказ</a></li>

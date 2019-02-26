@@ -31,6 +31,10 @@
 		width: 940px;
 		margin: 0 auto;
 	}
+
+	.show {
+		display: block;
+	}
 									
 
 /*---------------------ШАПКА---------------------*/
@@ -1851,7 +1855,6 @@
 		}
 
 		.map-popup {
-			display: none;
 			position: fixed;
 			margin: auto;
 				left: 0;
@@ -1867,7 +1870,6 @@
 
 		/*ПОПАП ФОРМА НАПИШИТЕ НАМ*/
 			.write-us-popup {
-				display: none;
 				flex-direction: column;
 				position: fixed;
 				margin: auto;
@@ -1955,7 +1957,6 @@
 
 		/*ПОПАП - ТОВАР ДОБАВЛЕН В КОРЗИНУ*/
 				.cart-add-popup {
-					display: none;
 					position: fixed;
 					margin: auto;
 						left: 0;
