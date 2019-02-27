@@ -1,19 +1,38 @@
+
+var buyBtns = document.querySelectorAll(".item-buy-btn");
+var bookmarkBtns = document.querySelectorAll(".item-bookmark-btn");
+var closeBtns = document.querySelectorAll(".close-popup");
+var slideBtns = document.querySelectorAll(".services-slider-item");
+var promoSlideBtns = document.querySelectorAll(".promo-slider-btn");
+
+
 /*Попап Добавлено в корзину Открыть*/
-buyBtns = document.querySelectorAll(".item-buy-btn");
 for (var i = 0; i < buyBtns.length; i++) {
 	buyBtns[i].addEventListener("click", function() {
 		event.preventDefault();
 		document.querySelector(".cart-add-popup").classList.remove("visually-hidden");
 		document.querySelector(".cart-add-popup").classList.add("show");
+		document.querySelector(".popup-overlay").classList.remove("visually-hidden");
 	});
 };
 
+/*Ховер карточки */
+for (var i = 0; i < buyBtns.length; i++) {
+	buyBtns[i].parentNode.parentNode.addEventListener("focus", function() {
+		this.classList.add("focus");
+	});
+	bookmarkBtns[i].addEventListener("blur", function() {
+		this.parentNode.parentNode.classList.remove("focus");
+	});
+}
+
+
 /*Все попапы - Закрыть*/
-closeBtns = document.querySelectorAll(".close-popup");
  for (var i = 0; i < closeBtns.length; i++) {
  	closeBtns[i].addEventListener("click", function() {
  			this.parentNode.classList.add("visually-hidden");
  			this.parentNode.classList.remove("show");
+ 			document.querySelector(".popup-overlay").classList.add("visually-hidden");
  	});
  }
 
@@ -22,6 +41,7 @@ document.querySelector(".map-thumbnail").addEventListener("click", function() {
 	event.preventDefault();
 	document.querySelector(".map-popup").classList.remove("visually-hidden");
 	document.querySelector(".map-popup").classList.add("show");
+	document.querySelector(".popup-overlay").classList.remove("visually-hidden");
 });
 
 /*Попап пишите нам Открыть*/
@@ -29,11 +49,11 @@ document.querySelector(".contact-info-write-us-btn").addEventListener("click", f
 	event.preventDefault();
 	document.querySelector(".write-us-popup").classList.remove("visually-hidden");
 	document.querySelector(".write-us-popup").classList.add("show");
+	document.querySelector(".popup-overlay").classList.remove("visually-hidden");
 });
 
 
 /*СЛАЙДЕР - СЕРВИСЫ*/
-var slideBtns = document.querySelectorAll(".services-slider-item");
 for (var i = 0; i < slideBtns.length; i++) {
 	slideBtns[i].addEventListener("click", function() {
 		var Services = document.getElementsByClassName("service-description-item"), i;
@@ -61,8 +81,6 @@ for (var i = 0; i < slideBtns.length; i++) {
 };
 
 /*СЛАЙДЕР - ПРОМО*/
-
-var promoSlideBtns = document.querySelectorAll(".promo-slider-btn");
 for (var i = 0; i < promoSlideBtns.length; i++) {
 	promoSlideBtns[i].addEventListener("click", function() {
 
@@ -92,27 +110,4 @@ for (var i = 0; i < promoSlideBtns.length; i++) {
 	});
 };
 
-
-
-    var links = document.querySelectorAll(".card-hover-btn");
-
-for (var i = 0; i < links.length; i++) {
-	links[i].parentNode.parentNode.addEventListener("focus", function() {
-		this.classList.add("focus");
-	});
-	links[i].addEventListener("blur", function() {
-		this.parentNode.parentNode.classList.remove("focus");
-	});
-}
-
-/*
-    card.addEventListener("focus", function() 
-    {
-        card.classList.add("focus");
-    }
-        );
  
-    link.addEventListener("blur", function() {
-      card.classList.remove("focus");   });   
-
-*/

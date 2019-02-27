@@ -1843,7 +1843,7 @@
 	/*---------------------ПОПАПЫ---------------------*/
 
 		.popup-overlay {
-			display: none;
+			display: block;
 			position: fixed;
 			left: 0;
 			right: 0;
@@ -1853,6 +1853,8 @@
 			height: 100%;
 			z-index: 80;
 		}
+
+
 
 		.map-popup {
 			position: fixed;
