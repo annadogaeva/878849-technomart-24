@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!--ШРИФТЫ-->
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
   	<header class="page-header">
@@ -53,7 +53,7 @@
   		</div>	
   		<div class="header-main container"> <!--Середина хедера-->
 	  			<h1 class="page-title">
-	  				Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта
+	  				Интернет-магазин строительных материалов&#160;&#160;&#160;&#160;&#160;&#160; и инструментов для ремонта
 	  			</h1>
 	  			<div class="header-contacts">
 	  					<div class="header-contacts-phone-number"><a href="tel:+78125550555">+7 (812) 555-05-55</a></div>
@@ -135,14 +135,14 @@
 					            <li><input type="checkbox" id="producer-2" class="filter-checkbox visually-hidden"><label for="producer-2" class="checkbox-label" tabindex="0">ИНТЕРСКОЛ</label></li>
 					            <li><input type="checkbox" id="producer-3" class="filter-checkbox visually-hidden"><label for="producer-3" class="checkbox-label" tabindex="0">MAKITA</label></li>
 					            <li><input type="checkbox" id="producer-4" class="filter-checkbox visually-hidden"><label for="producer-4" class="checkbox-label" tabindex="0">DEWALT</label></li>
-								<li><input type="checkbox" id="producer-5" class="filter-checkbox visually-hidden" disabled><label for="producer-5" class="checkbox-label" tabindex="0">HITACHI</label></li>
+								<li><input type="checkbox" id="producer-5" class="filter-checkbox visually-hidden"><label for="producer-5" class="checkbox-label" tabindex="0">HITACHI</label></li>
 							</ul>
 				          </fieldset>
 				          <fieldset class="filter-power">
 				            <legend class="filter-section-heading">Питание:</legend>
 				            <ul class="filter-list filter-power-list">
 					            <li><input name="power" type="radio" id="power1" class="filter-radio visually-hidden"><label for="power1" class="radiobutton-label" tabindex="0">Аккумуляторные</label></li>
-					            <li><input name="power" type="radio" id="power2" class="filter-radio visually-hidden" disabled><label for="power2" class="radiobutton-label" tabindex="0">Сетевые</label></li>
+					            <li><input name="power" type="radio" id="power2" class="filter-radio visually-hidden"><label for="power2" class="radiobutton-label" tabindex="0">Сетевые</label></li>
 				        	</ul>
 				        	</fieldset>
 				          <button type="submit" name="filter-submit" class="show-filtration-btn">Показать</button>
@@ -152,13 +152,21 @@
 			      <div class="catalog-flex">
 				    <section class="sorting">
 				        <h3 class="sorting-heading">Сортировка:</h3>
-				        <ul class="sorting-type">
+				        <div class="sorting-item-flex-wrapper">
+				        <ul class="sorting-type sorting-type-group">
 				          <li><a href="#" class="sorting-item sorting-item-active">По цене</a></li>
 				          <li><a href="#" class="sorting-item sorting-item-normal">По типу</a></li>
 				          <li><a href="#" class="sorting-item sorting-item-normal">По функционалу</a></li>
-				          <li><a href="#" class="sorting-item arrow arrow-up arrow-active" title="По возрастанию" aria-label="По возрастанию"></a></li>
-				          <li><a href="#" class="sorting-item sorting-item-normal arrow arrow-down" title="По убыванию" aria-label="По убыванию"></a></li>
+				         </ul>
+				         <ul class="sorting-type">
+				          <li>
+				          	<a href="#" class="sorting-item arrow arrow-up arrow-active" title="По возрастанию">По возрастанию</a>
+				          </li>
+				          <li>
+				          	<a href="#" class="sorting-item arrow arrow-down" title="По убыванию">По убыванию</a>
+				          </li>
 				        </ul>
+				        </div>
 				    </section>
 				    <section class="inner-catalog-section"> <!--Карточки перфораторов-->
 				        <h3 class="visually-hidden">Список перфораторов</h3>
@@ -170,9 +178,9 @@
 					                    	<svg class="catalog-item-hover-buy-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						                 width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
 						              <g>
-						                <circle cx="4.5" cy="13.5" r="1.5" fill="rgba(255, 255, 255, 0.3)"/>
-						                <circle cx="12.5" cy="13.5" r="1.5" fill="rgba(255, 255, 255, 0.3)"/>
-						                <polygon points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951   " fill="rgba(255, 255, 255, 0.3)"/>
+						                <circle cx="4.5" cy="13.5" r="1.5" />
+						                <circle cx="12.5" cy="13.5" r="1.5" />
+						                <polygon points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951   "/>
 						              </g>
 						              </svg>
 				                    Купить</a>
@@ -189,9 +197,9 @@
 							        	<svg class="catalog-item-hover-buy-icon" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						                 width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
 						              <g>
-						                <circle cx="4.5" cy="13.5" r="1.5" fill="rgba(255, 255, 255, 0.3)"/>
-						                <circle cx="12.5" cy="13.5" r="1.5" fill="rgba(255, 255, 255, 0.3)"/>
-						                <polygon points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951   " fill="rgba(255, 255, 255, 0.3)"/>
+						                <circle cx="4.5" cy="13.5" r="1.5"/>
+						                <circle cx="12.5" cy="13.5" r="1.5"/>
+						                <polygon points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951   " />
 						              </g>
 						              </svg>
 							        Купить</a>
@@ -209,16 +217,16 @@
 							        	<svg class="catalog-item-hover-buy-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						                 width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
 						              <g>
-						                <circle cx="4.5" cy="13.5" r="1.5" fill="rgba(255, 255, 255, 0.3)"/>
-						                <circle cx="12.5" cy="13.5" r="1.5" fill="rgba(255, 255, 255, 0.3)"/>
-						                <polygon points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951   " fill="rgba(255, 255, 255, 0.3)"/>
+						                <circle cx="4.5" cy="13.5" r="1.5" />
+						                <circle cx="12.5" cy="13.5" r="1.5"/>
+						                <polygon points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951   " />
 						              </g>
 						              </svg>
 							        Купить</a>
 							        <a href="#" class="btn item-bookmark-btn">В закладки</a>
 				            	</div>
 				            <h4 class="catalog-item-title">Перфоратор BOSCH BFG 2000</h4>
-				            <span class="old-price"><br></span>
+				            <span class="old-price"></span>
 				            <span class="new-price">12500 Р.</span>
 				          </li>
 				           <li class="catalog-item" tabindex="0">
@@ -228,9 +236,9 @@
 							        	<svg class="catalog-item-hover-buy-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						                 width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
 						              <g>
-						                <circle cx="4.5" cy="13.5" r="1.5" fill="rgba(255, 255, 255, 0.3)"/>
-						                <circle cx="12.5" cy="13.5" r="1.5" fill="rgba(255, 255, 255, 0.3)"/>
-						                <polygon points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951   " fill="rgba(255, 255, 255, 0.3)"/>
+						                <circle cx="4.5" cy="13.5" r="1.5" />
+						                <circle cx="12.5" cy="13.5" r="1.5" />
+						                <polygon points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951   " />
 						              </g>
 						              </svg>
 							        Купить</a>
@@ -248,9 +256,9 @@
 							        	<svg class="catalog-item-hover-buy-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						                 width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
 						              <g>
-						                <circle cx="4.5" cy="13.5" r="1.5" fill="rgba(255, 255, 255, 0.3)"/>
-						                <circle cx="12.5" cy="13.5" r="1.5" fill="rgba(255, 255, 255, 0.3)"/>
-						                <polygon points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951   " fill="rgba(255, 255, 255, 0.3)"/>
+						                <circle cx="4.5" cy="13.5" r="1.5" />
+						                <circle cx="12.5" cy="13.5" r="1.5" />
+						                <polygon points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951   " />
 						              </g>
 						              </svg>
 							        Купить</a>
@@ -267,16 +275,16 @@
 							        	<svg class="catalog-item-hover-buy-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						                 width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
 						              <g>
-						                <circle cx="4.5" cy="13.5" r="1.5" fill="rgba(255, 255, 255, 0.3)"/>
-						                <circle cx="12.5" cy="13.5" r="1.5" fill="rgba(255, 255, 255, 0.3)"/>
-						                <polygon points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951   " fill="rgba(255, 255, 255, 0.3)"/>
+						                <circle cx="4.5" cy="13.5" r="1.5" />
+						                <circle cx="12.5" cy="13.5" r="1.5" />
+						                <polygon points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951   " />
 						              </g>
 						              </svg>
 							        Купить</a>
 							        <a href="#" class="btn item-bookmark-btn">В закладки</a>
 				            	</div>
 				            <h4 class="catalog-item-title">Перфоратор BOSCH BFG 2000</h4>
-				            <span class="old-price"><br></span>
+				            <span class="old-price"></span>
 				            <span class="new-price">12500 Р.</span>
 				          </li>
 				           <li class="catalog-item"  tabindex="0">
@@ -287,9 +295,9 @@
 							        	<svg class="catalog-item-hover-buy-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						                 width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
 						              <g>
-						                <circle cx="4.5" cy="13.5" r="1.5" fill="rgba(255, 255, 255, 0.3)"/>
-						                <circle cx="12.5" cy="13.5" r="1.5" fill="rgba(255, 255, 255, 0.3)"/>
-						                <polygon points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951   " fill="rgba(255, 255, 255, 0.3)"/>
+						                <circle cx="4.5" cy="13.5" r="1.5" />
+						                <circle cx="12.5" cy="13.5" r="1.5" />
+						                <polygon points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951   " />
 						              </g>
 						              </svg>
 							        Купить</a>
@@ -306,9 +314,9 @@
 							        	<svg class="catalog-item-hover-buy-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						                 width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
 						              <g>
-						                <circle cx="4.5" cy="13.5" r="1.5" fill="rgba(255, 255, 255, 0.3)"/>
-						                <circle cx="12.5" cy="13.5" r="1.5" fill="rgba(255, 255, 255, 0.3)"/>
-						                <polygon points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951   " fill="rgba(255, 255, 255, 0.3)"/>
+						                <circle cx="4.5" cy="13.5" r="1.5" />
+						                <circle cx="12.5" cy="13.5" r="1.5" />
+						                <polygon points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951   " />
 						              </g>
 						              </svg>
 							        Купить</a>
@@ -325,16 +333,16 @@
 							        	<svg class="catalog-item-hover-buy-icon" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						                 width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
 						              <g>
-						                <circle cx="4.5" cy="13.5" r="1.5" fill="rgba(255, 255, 255, 0.3)"/>
-						                <circle cx="12.5" cy="13.5" r="1.5" fill="rgba(255, 255, 255, 0.3)"/>
-						                <polygon points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951   " fill="rgba(255, 255, 255, 0.3)"/>
+						                <circle cx="4.5" cy="13.5" r="1.5" />
+						                <circle cx="12.5" cy="13.5" r="1.5" />
+						                <polygon points="15,2 4.07,2 3.648,0 0,0 0,2 2.031,2 4.016,11 15,11 15,9 9.441,9 15,6.951   " "/>
 						              </g>
 						              </svg>
 							        Купить</a>
 							        <a href="#" class="btn item-bookmark-btn">В закладки</a>
 				            	</div>
 				            <h4 class="catalog-item-title">Перфоратор BOSCH BFG 2000</h4>
-				            <span class="old-price"><br></span>
+				            <span class="old-price"></span>
 				            <span class="new-price">12500 Р.</span>
 				          </li>
 				        </ul>
@@ -393,7 +401,7 @@
   		<div class="footer-bottom"> <!--Низ футера-->
   			<div class="container">
 	  			<p class="copyright footer-copyright"> 
-	  				© 2010–2019 Компания «Техномарт»<br>
+	  				© 2010–2019 Компания «Техномарт»
 					Все права защищены
 	  			</p>
 	  			<div class="footer-social"> <!--Соц сети-->
@@ -408,6 +416,6 @@
   			</div>
   		</div>
   	</footer>
-  	<script src="js/script.js"></script>
+  	<script src="js/scriptinner.js"></script>
   </body>
 </html>

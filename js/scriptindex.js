@@ -8,15 +8,15 @@ var promoSlideBtns = document.querySelectorAll(".promo-slider-btn");
 
 /*Попап Добавлено в корзину Открыть*/
 for (var i = 0; i < buyBtns.length; i++) {
-	buyBtns[i].addEventListener("click", function() {
-		event.preventDefault();
+	buyBtns[i].addEventListener("click", function(event) {
 		document.querySelector(".cart-add-popup").classList.remove("visually-hidden");
 		document.querySelector(".cart-add-popup").classList.add("show");
 		document.querySelector(".popup-overlay").classList.remove("visually-hidden");
+		event.preventDefault();
 	});
 };
 
-/*Ховер карточки */
+/*Ховер карточки 
 for (var i = 0; i < buyBtns.length; i++) {
 	buyBtns[i].parentNode.parentNode.addEventListener("focus", function() {
 		this.classList.add("focus");
@@ -24,8 +24,7 @@ for (var i = 0; i < buyBtns.length; i++) {
 	bookmarkBtns[i].addEventListener("blur", function() {
 		this.parentNode.parentNode.classList.remove("focus");
 	});
-}
-
+} */
 
 /*Все попапы - Закрыть*/
  for (var i = 0; i < closeBtns.length; i++) {
@@ -35,21 +34,21 @@ for (var i = 0; i < buyBtns.length; i++) {
  			document.querySelector(".popup-overlay").classList.add("visually-hidden");
  	});
  }
-
+ 
 /*Попап с картой Открыть*/
-document.querySelector(".map-thumbnail").addEventListener("click", function() {
-	event.preventDefault();
+document.querySelector(".map-thumbnail").addEventListener("click", function(event) {
 	document.querySelector(".map-popup").classList.remove("visually-hidden");
 	document.querySelector(".map-popup").classList.add("show");
 	document.querySelector(".popup-overlay").classList.remove("visually-hidden");
+	event.preventDefault();
 });
 
 /*Попап пишите нам Открыть*/
-document.querySelector(".contact-info-write-us-btn").addEventListener("click", function() {
-	event.preventDefault();
+document.querySelector(".contact-info-write-us-btn").addEventListener("click", function(event) {
 	document.querySelector(".write-us-popup").classList.remove("visually-hidden");
 	document.querySelector(".write-us-popup").classList.add("show");
 	document.querySelector(".popup-overlay").classList.remove("visually-hidden");
+	event.preventDefault();
 });
 
 
