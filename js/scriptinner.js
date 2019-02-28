@@ -12,7 +12,7 @@ for (var i = 0; i < buyBtns.length; i++) {
 	});
 };
 
-/*Ховер карточки */
+/*Ховер карточки 
 for (var i = 0; i < buyBtns.length; i++) {
 	buyBtns[i].parentNode.parentNode.addEventListener("focus", function() {
 		this.classList.add("focus");
@@ -20,7 +20,7 @@ for (var i = 0; i < buyBtns.length; i++) {
 	bookmarkBtns[i].addEventListener("blur", function() {
 		this.parentNode.parentNode.classList.remove("focus");
 	});
-} 
+} */
 
 /*Все попапы - Закрыть*/
  for (var i = 0; i < closeBtns.length; i++) {

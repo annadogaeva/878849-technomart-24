@@ -10,7 +10,7 @@
 
 	body {
 		margin: 0;
-		font-family: 'PT Sans', 'Trebuchet MS', sans-serif;
+		font-family: "PT Sans", "Trebuchet MS", sans-serif;
 
 	}
 
@@ -46,7 +46,7 @@
 			padding-bottom: 60px;
 
 			font-size: 17px;
-			font-family: 'Cuprum', 'Arial', 'Helvetica', sans-serif; 
+			font-family: "Cuprum", "Arial", "Helvetica", sans-serif; 
 	}
 		/*--ВЕРХ ШАПКИ--*/
 			.header-top {
@@ -577,7 +577,7 @@
 
 /*---------------------ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ---------------------*/
 	main {
-		font-family: 'PT Sans', 'Trebuchet MS', 'Helvetica', sans-serif;
+		font-family: "PT Sans", "Trebuchet MS", "Helvetica", sans-serif;
 		font-size: 13px;
 	}
 
@@ -585,7 +585,7 @@
 
 		.section-heading {
 			color: black;
-			font-family: 'Cuprum', 'Arial', 'Helvetica', sans-serif;  
+			font-family: "Cuprum", "Arial", "Helvetica", sans-serif;  
 			font-size: 30px;
 			line-height: 30px;
 			text-transform: uppercase;
@@ -595,7 +595,7 @@
 
 		.section-heading-catalog {
 			color: #32425c;
-			font-family: 'Cuprum', 'Arial', 'Helvetica', sans-serif; 
+			font-family: "Cuprum", "Arial", "Helvetica", sans-serif; 
 			font-size: 30px;
 			line-height: 30px;
 			text-transform: uppercase;
@@ -620,7 +620,7 @@
 
 				color: white;
 				font-size: 14px;
-				font-family: 'Cuprum', 'Arial', 'Helvetica', sans-serif; 
+				font-family: "Cuprum", "Arial", "Helvetica", sans-serif; 
 				text-transform: uppercase; 
 				text-align: center;
 				}
@@ -706,7 +706,7 @@
 						font-size: 24px;
 						font-weight: bold;
 
-						font-family: 'Cuprum', 'Arial', 'Helvetica', sans-serif; 
+						font-family: "Cuprum", "Arial", "Helvetica", sans-serif; 
 
 						margin: 0;
 						margin-left: 23px;
@@ -725,7 +725,7 @@
 						border-radius: 3px; 
 
 						font-size: 14px;
-						font-family: 'Cuprum', 'Arial', 'Helvetica', sans-serif; 
+						font-family: "Cuprum", "Arial", "Helvetica", sans-serif; 
 						text-transform: uppercase;
 
 						margin-left: 25px;
@@ -746,32 +746,32 @@
 							/*КАРТОЧКИ*/
 							.promo-item-materials {
 								background-color: #ffbf47;
-								background-image: url('../img/icon-1.svg');
+								background-image: url("../img/icon-1.svg");
 								background-position: 83% 50%;
 							}
 
 							.promo-item-instrument {
 								background-color: #3bbce3;
-								background-image: url('../img/icon-2.svg');
+								background-image: url("../img/icon-2.svg");
 								background-position: 88% 53%;
 							}
 
 							.promo-item-tech {
 								background-color: #dc91d8;
-								background-image: url('../img/icon-3.svg');
+								background-image: url("../img/icon-3.svg");
 								background-position: 86% 47%;
 							}
 
 							.promo-item-sale {
 								background-color: #8ed78f;
-								background-image: url('../img/icon-4.svg');
+								background-image: url("../img/icon-4.svg");
 								background-position: 82% 47%;
 
 							}
 
 							.promo-item-delivery {
 								background-color: #ffc047;
-								background-image: url('../img/icon-5.svg');
+								background-image: url("../img/icon-5.svg");
 								background-position: 87% 54%;
 							}
 
@@ -792,18 +792,18 @@
 								/*Настройки состояний*/
 									.promo-item-slider-drill {
 
-										background-image: url('../img/drill-man.jpg');
+										background-image: url("../img/drill-man.jpg");
 									}
 
 									.promo-item-slider-perforator {
 										display: none;
-										background-image: url('../img/perforator-man.jpg');
+										background-image: url("../img/perforator-man.jpg");
 									}
 
 							.promo-slider-heading {
 								font-size: 36px;
 								font-weight: bold;
-								font-family: 'Cuprum', 'Arial', 'Helvetica', sans-serif; 
+								font-family: "Cuprum", "Arial", "Helvetica", sans-serif; 
 								text-transform: uppercase;
 
 								margin: 0;
@@ -813,7 +813,7 @@
 
 							.promo-slider-description {
 								font-size: 18px;
-								font-family: 'Cuprum', 'Arial', 'Helvetica', sans-serif; 
+								font-family: "Cuprum", "Arial", "Helvetica", sans-serif; 
 
 								margin: 0;
 								margin-top: 3px;
@@ -1030,7 +1030,7 @@
 						color: white;
 						font-size: 21px;
 						font-weight: bold;
-						font-family: 'Cuprum', 'Arial', 'Helvetica', sans-serif;
+						font-family: "Cuprum", "Arial", "Helvetica", sans-serif;
 						overflow: hidden;
 						text-overflow: ellipsis; 
 					}

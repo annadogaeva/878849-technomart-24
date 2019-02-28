@@ -57,7 +57,7 @@ for (var i = 0; i < slideBtns.length; i++) {
 	slideBtns[i].addEventListener("click", function() {
 		var Services = document.getElementsByClassName("service-description-item"), i;
         	for (var i = 0; i < Services.length; i ++) {
-			    Services[i].style.display = 'none';
+			    Services[i].style.display = "none";
 			}
 			var ServicesLinks = document.getElementsByClassName("services-slider-item"), i;
 			for (var i = 0; i < ServicesLinks.length; i ++) {
@@ -68,13 +68,13 @@ for (var i = 0; i < slideBtns.length; i++) {
         	this.classList.remove("services-slider-item-normal");
 
         	if (this.innerHTML == "Гарантия") {
-        		document.getElementById('warrantydescript').style.display = "block";
+        		document.getElementById("warrantydescript").style.display = "block";
         	}
         	else if (this.innerHTML == "Доставка") {
-        		document.getElementById('deliverydescript').style.display = "block";	
+        		document.getElementById("deliverydescript").style.display = "block";	
         	}
         	else if (this.innerHTML == "Кредит") {
-        		document.getElementById('creditdescript').style.display = "block";
+        		document.getElementById("creditdescript").style.display = "block";
         	}
 	});
 };
@@ -85,7 +85,7 @@ for (var i = 0; i < promoSlideBtns.length; i++) {
 
 		 var Slides = document.getElementsByClassName("promo-item-slider"), i;
         	for (var i = 0; i < Slides.length; i ++) {
-			    Slides[i].style.display = 'none';
+			    Slides[i].style.display = "none";
 			} 
 
 			var Slide = this.parentNode;
