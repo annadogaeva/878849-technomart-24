@@ -2395,6 +2395,29 @@ main {
   margin-right: auto;
 }
 
+@keyframes moveform {
+  from {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.write-us-popup {
+	animation-name: moveform;
+  animation-duration: 0.2s;
+  animation-iteration-count: 3;
+  animation-timing-function: linear;
+
+}
+
 /*ПОПАП - ТОВАР ДОБАВЛЕН В КОРЗИНУ*/
 .cart-add-popup {
   position: fixed;
