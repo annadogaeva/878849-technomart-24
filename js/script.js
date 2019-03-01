@@ -4,7 +4,7 @@ var bookmarkBtns = document.querySelectorAll(".item-bookmark-btn");
 var closeBtns = document.querySelectorAll(".close-popup");
 var slideBtns = document.querySelectorAll(".services-slider-item");
 var promoSlideBtns = document.querySelectorAll(".promo-slider-btn");
-
+var popups = document.querySelectorAll(".popup");
 
 /*Попап Добавлено в корзину Открыть*/
 for (var i = 0; i < buyBtns.length; i++) {
@@ -27,32 +27,44 @@ for (var i = 0; i < buyBtns.length; i++) {
 } */
 
 /*Все попапы - Закрыть*/
+
  for (var i = 0; i < closeBtns.length; i++) {
- 	closeBtns[i].addEventListener("click", function() {
- 			this.parentNode.classList.add("visually-hidden");
- 			this.parentNode.classList.remove("show");
- 			document.querySelector(".popup-overlay").classList.add("visually-hidden");
- 	});
- }
- 
+ 	closeBtns[i].addEventListener("click", closePopup);
+ };
+
+ document.querySelector(".popup-overlay").addEventListener("click", closePopup);
+ document.querySelector(".continue-shopping-btn").addEventListener("click", closePopup);
+
+function closePopup() {
+	for (var i = 0; i < popups.length; i++) {
+		popups[i].classList.add("visually-hidden");
+		popups[i].classList.remove("show");
+		document.querySelector(".popup-overlay").classList.add("visually-hidden");
+		event.preventDefault();
+	};
+};
+
 /*Попап с картой Открыть*/
+if (document.querySelector(".map-thumbnail")) {
 document.querySelector(".map-thumbnail").addEventListener("click", function(event) {
 	document.querySelector(".map-popup").classList.remove("visually-hidden");
 	document.querySelector(".map-popup").classList.add("show");
 	document.querySelector(".popup-overlay").classList.remove("visually-hidden");
 	event.preventDefault();
-});
+}); };
 
 /*Попап пишите нам Открыть*/
+if (document.querySelector(".contact-info-write-us-btn")) {
 document.querySelector(".contact-info-write-us-btn").addEventListener("click", function(event) {
 	document.querySelector(".write-us-popup").classList.remove("visually-hidden");
 	document.querySelector(".write-us-popup").classList.add("show");
 	document.querySelector(".popup-overlay").classList.remove("visually-hidden");
 	event.preventDefault();
-});
+}); };
 
 
 /*СЛАЙДЕР - СЕРВИСЫ*/
+if (slideBtns) {
 for (var i = 0; i < slideBtns.length; i++) {
 	slideBtns[i].addEventListener("click", function() {
 		var Services = document.getElementsByClassName("service-description-item"), i;
@@ -77,9 +89,10 @@ for (var i = 0; i < slideBtns.length; i++) {
         		document.getElementById("creditdescript").style.display = "block";
         	}
 	});
-};
+}; };
 
 /*СЛАЙДЕР - ПРОМО*/
+if (promoSlideBtns) {
 for (var i = 0; i < promoSlideBtns.length; i++) {
 	promoSlideBtns[i].addEventListener("click", function() {
 
@@ -107,6 +120,15 @@ for (var i = 0; i < promoSlideBtns.length; i++) {
 				}		  	
 
 	});
-};
+}; };
 
+/*
+document.querySelector(".write-us-popup-submit").addEventListener("click", function() {
+		var fields = document.querySelectorAll(".field-required");
+		for (var i = 0; i < fields.length; i++) {
+			if (!fields[i].lastElementChild.value) {
+				fields[i].lastElementChild.style.backgroundColor = "red";
+			}
+}
+ }); */
  
