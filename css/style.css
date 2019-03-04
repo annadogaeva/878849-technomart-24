@@ -1322,6 +1322,7 @@ main {
 }
 
 .breadcrumb-home-page {
+	display: block;
   width: 15px;
   height: 15px;
   background: url(../img/icon-home.svg) no-repeat 50% center;
@@ -2213,17 +2214,17 @@ main {
 
 @keyframes showpopup {
   from {
-    transform: translateY(0px);
+    transform: translateY(-200px);
   }
   to{
-    transform: translateY(150px);
+    transform: translateY(0px);
   }
 }
 
 .show-popup {
   animation-name: showpopup;
-  animation-duration: 0.2s;
-  animation-timing-function: ease;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
   animation-iteration-count: 1;
 }
 

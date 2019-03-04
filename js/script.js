@@ -4,15 +4,19 @@ var closeBtns = document.querySelectorAll(".close-popup");
 var slideBtns = document.querySelectorAll(".services-slider-item");
 var promoSlideBtns = document.querySelectorAll(".promo-slider-btn");
 var popups = document.querySelectorAll(".popup");
+var cartPopup = document.querySelector(".cart-add-popup");
+var mapPopup = document.querySelector(".map-popup");
+var writeUsPopup = document.querySelector(".write-us-popup");
 
 /*Попап Добавлено в корзину Открыть*/
 for (var i = 0; i < buyBtns.length; i++) {
   buyBtns[i].addEventListener("click", function(event) {
-    document.querySelector(".cart-add-popup").classList.remove("visually-hidden");
-    void buyBtns[i].offsetWidth;
-    document.querySelector(".cart-add-popup").classList.add("show-popup");
-    document.querySelector(".cart-add-popup").classList.add("show");
+    cartPopup.classList.remove("visually-hidden");
+    cartPopup.classList.add("show");
     document.querySelector(".popup-overlay").classList.remove("visually-hidden");
+    cartPopup.classList.remove("show-popup");
+    void cartPopup.offsetWidth;
+    cartPopup.classList.add("show-popup");
      event.preventDefault();
   });
 };
@@ -21,10 +25,8 @@ for (var i = 0; i < buyBtns.length; i++) {
 for (var i = 0; i < closeBtns.length; i++) {
   closeBtns[i].addEventListener("click", closePopup);
 };
-
 document.querySelector(".popup-overlay").addEventListener("click", closePopup);
 document.querySelector(".continue-shopping-btn").addEventListener("click", closePopup);
-
 function closePopup(event) {
   for (var i = 0; i < popups.length; i++) {
     popups[i].classList.add("visually-hidden");
@@ -37,9 +39,12 @@ function closePopup(event) {
 /*Попап с картой Открыть*/
 if (document.querySelector(".map-thumbnail")) {
   document.querySelector(".map-thumbnail").addEventListener("click", function(event) {
-    document.querySelector(".map-popup").classList.remove("visually-hidden");
-    document.querySelector(".map-popup").classList.add("show");
+    mapPopup.classList.remove("visually-hidden");
+    mapPopup.classList.add("show");
     document.querySelector(".popup-overlay").classList.remove("visually-hidden");
+    mapPopup.classList.remove("show-popup");
+    void mapPopup.offsetWidth;
+    mapPopup.classList.add("show-popup");
     event.preventDefault();
   });
 };
@@ -47,13 +52,15 @@ if (document.querySelector(".map-thumbnail")) {
 /*Попап пишите нам Открыть*/
 if (document.querySelector(".contact-info-write-us-btn")) {
   document.querySelector(".contact-info-write-us-btn").addEventListener("click", function(event) {
-    document.querySelector(".write-us-popup").classList.remove("visually-hidden");
-    document.querySelector(".write-us-popup").classList.add("show");
+    writeUsPopup.classList.remove("visually-hidden");
+    writeUsPopup.classList.add("show");
     document.querySelector(".popup-overlay").classList.remove("visually-hidden");
+    writeUsPopup.classList.remove("show-popup");
+    void writeUsPopup.offsetWidth;
+    writeUsPopup.classList.add("show-popup");
     event.preventDefault();
   });
 };
-
 
 /*СЛАЙДЕР - СЕРВИСЫ*/
 if (slideBtns) {
@@ -72,11 +79,9 @@ if (slideBtns) {
       for (var i = 0; i < ServicesLinks.length; i++) {
         ServicesLinks[i].classList.remove("services-slider-item-active");
       }
-
       this.classList.add("services-slider-item-active");
       this.classList.remove("services-slider-item-normal");
       this.removeAttribute("tabindex");
-
       if (this.innerHTML == "Гарантия") {
         document.getElementById("warrantydescript").style.display = "block";
       } else if (this.innerHTML == "Доставка") {
@@ -118,6 +123,7 @@ if (promoSlideBtns) {
   };
 };
 
+/*Анимация при отправке формы*/
 if (document.querySelector(".write-us-popup-submit")) {
   document.querySelector(".write-us-popup-submit").addEventListener("click", function() {
     var fields = document.querySelectorAll(".field-required");
